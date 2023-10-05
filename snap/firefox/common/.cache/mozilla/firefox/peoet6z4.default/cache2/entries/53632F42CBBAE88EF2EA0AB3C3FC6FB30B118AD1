@@ -1,0 +1,497 @@
+#EXTM3U
+#EXT-X-VERSION:4
+## Created with Unified Streaming Platform  (version=1.12.1-28247)
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXT-X-MEDIA-SEQUENCE:1
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-TARGETDURATION:4
+#USP-X-TIMESTAMP-MAP:MPEGTS=900000,LOCAL=1970-01-01T00:00:00Z
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-1.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-2.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-3.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-4.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-5.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-6.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-7.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-8.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-9.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-10.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-11.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-12.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-13.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-14.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-15.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-16.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-17.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-18.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-19.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-20.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-21.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-22.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-23.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-24.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-25.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-26.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-27.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-28.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-29.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-30.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-31.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-32.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-33.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-34.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-35.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-36.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-37.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-38.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-39.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-40.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-41.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-42.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-43.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-44.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-45.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-46.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-47.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-48.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-49.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-50.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-51.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-52.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-53.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-54.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-55.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-56.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-57.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-58.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-59.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-60.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-61.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-62.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-63.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-64.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-65.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-66.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-67.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-68.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-69.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-70.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-71.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-72.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-73.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-74.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-75.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-76.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-77.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-78.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-79.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-80.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-81.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-82.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-83.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-84.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-85.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-86.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-87.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-88.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-89.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-90.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-91.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-92.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-93.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-94.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-95.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-96.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-97.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-98.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-99.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-100.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-101.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-102.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-103.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-104.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-105.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-106.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-107.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-108.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-109.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-110.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-111.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-112.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-113.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-114.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-115.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-116.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-117.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-118.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-119.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-120.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-121.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-122.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-123.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-124.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-125.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-126.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-127.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-128.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-129.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-130.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-131.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-132.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-133.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-134.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-135.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-136.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-137.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-138.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-139.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-140.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-141.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-142.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-143.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-144.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-145.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-146.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-147.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-148.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-149.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-150.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-151.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-152.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-153.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-154.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-155.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-156.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-157.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-158.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-159.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-160.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-161.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-162.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-163.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-164.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-165.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-166.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-167.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-168.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-169.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-170.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-171.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-172.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-173.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-174.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-175.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-176.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-177.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-178.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-179.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-180.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-181.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-182.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-183.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-184.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-185.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-186.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-187.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-188.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-189.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-190.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-191.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-192.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-193.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-194.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-195.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-196.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-197.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-198.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-199.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-200.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-201.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-202.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-203.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-204.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-205.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-206.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-207.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-208.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-209.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-210.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-211.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-212.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-213.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-214.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-215.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-216.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-217.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-218.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-219.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-220.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-221.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-222.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-223.ts
+#EXTINF:4, no desc
+manifest-audio_eng=112000-video_eng=26996-224.ts
+#EXTINF:1.1, no desc
+manifest-audio_eng=112000-video_eng=26996-225.ts
+#EXT-X-ENDLIST
+ÖAƒK¬v      e.¡e.¡FŒAeCPc   ò    O^partitionKey=%28https%2Clinuxhint.com%29,a,:https://videos-cloudfront-usp.jwpsrv.com/651cd719_d2e0d7f6d6d645831aeb11d7ba52290fad70eaf6/site/nYEycxMK/media/wHLhP0M4/version/wHLhP0M4/manifest.ism/manifest-audio_eng=112000-video_eng=26996.m3u8 necko:classified 1 strongly-framed 1 security-info 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 request-method GET request-Accept-Encoding gzip, deflate, br response-head HTTP/2 200 OK
+content-type: application/vnd.apple.mpegurl
+content-length: 15464
+server: Apache
+accept-ranges: bytes
+access-control-allow-headers: origin, range, x-cdn-forward
+access-control-allow-origin: *
+access-control-expose-headers: server,range,date,x-cdn-forward
+timing-allow-origin: *
+date: Tue, 03 Oct 2023 12:59:12 GMT
+cache-control: max-age=2592000
+etag: "usp-F3D25F39"
+vary: Accept-Encoding
+x-cache: Hit from cloudfront
+via: 1.1 1a98edd9b5ae710aff749fc0d5d62d66.cloudfront.net (CloudFront)
+x-amz-cf-pop: HKG62-C2
+x-amz-cf-id: xQQZ1i6gU0BESa8lZXVl_4w0exQNr3UCeGmQylJl0j0XZZRFMXdvCg==
+age: 27454
+X-Firefox-Spdy: h2
+ original-response-headers content-type: application/vnd.apple.mpegurl
+content-length: 15464
+server: Apache
+accept-ranges: bytes
+access-control-allow-headers: origin, range, x-cdn-forward
+access-control-allow-origin: *
+access-control-expose-headers: server,range,date,x-cdn-forward
+timing-allow-origin: *
+date: Tue, 03 Oct 2023 12:59:12 GMT
+cache-control: max-age=2592000
+etag: "usp-F3D25F39"
+vary: Accept-Encoding
+x-cache: Hit from cloudfront
+via: 1.1 1a98edd9b5ae710aff749fc0d5d62d66.cloudfront.net (CloudFront)
+x-amz-cf-pop: HKG62-C2
+x-amz-cf-id: xQQZ1i6gU0BESa8lZXVl_4w0exQNr3UCeGmQylJl0j0XZZRFMXdvCg==
+age: 27454
+X-Firefox-Spdy: h2
+ ctid 1 net-response-time-onstart 54 net-response-time-onstop 54   <h

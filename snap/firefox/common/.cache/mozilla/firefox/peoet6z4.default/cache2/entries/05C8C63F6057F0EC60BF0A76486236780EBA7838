@@ -1,0 +1,2097 @@
+(function (w) {
+        let extraError=false
+        let splitOnly=false
+        let noSplitOnly=false
+        let smDebug=false
+        let testVersionOnly=null
+
+        try{
+            let urlSearchParams
+            try {
+                     urlSearchParams = new URLSearchParams(top.window.location.search)
+                } catch (e) {
+                     urlSearchParams = new URLSearchParams(window.location.search)
+                }
+                splitOnly=urlSearchParams.get("sm_split") === 'true'
+                noSplitOnly=urlSearchParams.get("sm_no_split") === 'true'
+                smDebug=urlSearchParams.get("sm_debug") === 'true'
+                testVersionOnly=urlSearchParams.get("sm_test_version")
+
+                if(splitOnly || noSplitOnly||smDebug){
+                    debugger
+                }
+        }catch(err){
+            }
+        const filterDomainsEnable=false
+        if(filterDomainsEnable){
+            try{
+                    let included=false;
+                    const filterDomainsIncluded=false
+                    const domainToFilter=[]
+                    for (let i = 0; i < domainToFilter.length; i++) {
+                       if (window.location.href.includes(domainToFilter[i])) {
+                              included = true;
+                              break
+                       }
+                    }
+
+                   if(filterDomainsIncluded==true && !included){
+                        return
+                   }
+                   if(filterDomainsIncluded==false && included){
+                        return
+                   }
+            }catch(err){
+
+            }
+        }
+
+       let schain='615ad8f9fc48ab40845ac82d'
+
+       let newSizeM=true
+       let newSizeD=true
+       let extraDes={}
+       let extraMob={}
+
+       
+
+       const PlayerSizeType={FIX: "FIXED",RESPONSIVE:"RESPONSIVE",SCALE:"SCALE"}
+
+       let c = {"id":"84e6a241-2295-4758-8416-e2c0163717a0","templateType":"OUTSTREAM","playerType":"IN_ARTICLE","unlimitedWaterfallRuns":true,"waterfallRuns":10,"midrollDelay":1,"autoplay":false,"clickToPlay":false,"pauseOnUnseen":false,"closeButton":false,"advertisingLabel":"Advertisement","playerMaxWidth":640,"playerMinWidth":250,"playerMaxHeight":0,"openingAnimation":false,"zIndexMax":false,"zIndex":4,"customCSS":"","heightMargin":0,"widthMargin":0,"positioning":"BOTTOM_RIGHT","floaterSize":"SCALE","floaterWidth":15,"floaterHeight":0,"floaterMaxWidth":0,"floaterMaxHeight":0,"playerCloseButtonPositioning":"RIGHT","passBack":true,"passBackUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65871aa85a2a7f02c035/vidsplay_auto_pass_post.txt","passBackWidth":300,"passBackHeight":250,"preloader":true,"preloaderUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65872a8cca2e222014bb/vidsplay_auto_pass_pre.txt","preloaderWidth":300,"preloaderHeight":250,"playerUrl":"https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.js","errorLimit":450,"timeBetweenWaterfalls":1000,"autoPlayAfterTimePassSec":10,"enableAutoPlayAfterTimePass":true,"backGroundPreBidDuplicateLoad":5,"preBidDuplicateLoad":5,"requestUntilBidReady":3,"vastLoadTimeout":2000,"prebidTimeOut":6000,"waterfallErrorLimitEnabled":true,"playerSize":"RESPONSIVE","width":300,"height":250,"advertisingLabelLocation":"OUT","scaleWidthPercentage":20,"iframeWorkers":20,"enableViewAbilityTimeout":true,"viewAbilityTimeout":30,"enableMultiLoadLock":false,"preloaderBeforeWaitInMil":0,"passBeforeWaitInMil":0,"floatOnlyOnBottom":false,"autoHideDisplay":false,"enableTimeWaitBetweenGoogle":false,"timeWaitBetweenGoogleInSec":5,"googleWorkers":8,"enableAdSourcesABCpm":false}
+       c.isExpandable= !c.openingAnimation
+       c.isExpandable=false
+       if(newSizeD){
+        for (const property in extraDes) {
+                c[property]=extraDes[property]
+            }
+       }
+       let cm = {"id":"13040bed-d283-4fd9-abec-62d240273393","templateType":"OUTSTREAM","playerType":"IN_ARTICLE","unlimitedWaterfallRuns":true,"waterfallRuns":10,"midrollDelay":1,"autoplay":false,"clickToPlay":false,"pauseOnUnseen":false,"closeButton":false,"advertisingLabel":"Advertisement","playerMaxWidth":640,"playerMinWidth":250,"playerMaxHeight":0,"openingAnimation":false,"zIndexMax":false,"zIndex":4,"customCSS":"","heightMargin":0,"widthMargin":0,"positioning":"BOTTOM_RIGHT","floaterSize":"SCALE","floaterWidth":15,"floaterHeight":0,"floaterMaxWidth":0,"floaterMaxHeight":0,"playerCloseButtonPositioning":"RIGHT","passBack":true,"passBackUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65871aa85a2a7f02c035/vidsplay_auto_pass_post.txt","passBackWidth":300,"passBackHeight":250,"preloader":true,"preloaderUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65872a8cca2e222014bb/vidsplay_auto_pass_pre.txt","preloaderWidth":300,"preloaderHeight":250,"playerUrl":"https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.js","errorLimit":450,"timeBetweenWaterfalls":1000,"autoPlayAfterTimePassSec":10,"enableAutoPlayAfterTimePass":true,"backGroundPreBidDuplicateLoad":5,"preBidDuplicateLoad":5,"requestUntilBidReady":3,"vastLoadTimeout":2000,"prebidTimeOut":6000,"waterfallErrorLimitEnabled":true,"playerSize":"RESPONSIVE","width":300,"height":250,"advertisingLabelLocation":"OUT","scaleWidthPercentage":20,"iframeWorkers":20,"enableViewAbilityTimeout":true,"viewAbilityTimeout":30,"enableMultiLoadLock":false,"preloaderBeforeWaitInMil":0,"passBeforeWaitInMil":0,"floatOnlyOnBottom":false,"autoHideDisplay":false,"enableTimeWaitBetweenGoogle":false,"timeWaitBetweenGoogleInSec":5,"googleWorkers":8,"enableAdSourcesABCpm":false}
+       cm.isExpandable= !cm.openingAnimation
+       cm.isExpandable=false
+       let selectedPosObject=null
+        if(newSizeM){
+            for (const property in extraMob) {
+                cm[property]=extraMob[property]
+            }
+        }
+
+
+        if(window.smampdata&& window.smampdata.amptag==true){
+
+                   for(const property in window.smampdata){
+                       c[property]=window.smampdata[property]
+                   }
+                   for(const property in window.smampdata){
+                       cm[property]=window.smampdata[property]
+                   }
+        }
+
+
+
+
+
+
+
+
+       let p=[]
+       if(p==null){
+            p=[]
+       }
+       let pm=[]
+       if(pm==null){
+            pm=[]
+       }
+       if(window.smampdata&& window.smampdata.amptag==true){
+            p=[{"positionIdentifierType":"SELECTOR","order":0,"position":"#tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9","rationalPositioning":"IN","positionCounter":0}]
+            pm=[{"positionIdentifierType":"SELECTOR","order":0,"position":"#tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9","rationalPositioning":"IN","positionCounter":0}]
+       }
+       const playerUrl='https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.js'
+       const playerStyleUrl='https://serv-selectmedia.com/cdn/player/style.css'
+       const playerKey='default'
+       const tagId='tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9'
+       const trafficGroupId='508b306a-e4d8-4a71-8029-3a1da0a810e7'
+       const publisherId='1f7d4e52-3235-4d3c-8030-fcb7f6af74c4'
+
+       const retryLimit=20
+       const scriptID = tagId
+       const channelId= '508b306a-e4d8-4a71-8029-3a1da0a810e7'
+       let retryCount = 0;
+       let scriptLoadErrorCounter = 0
+       const baseTrackUrl = "//track-selectmedia.com/trackv4/?"
+       const scriptPosConfig = [{
+           "positionIdentifierType": "SELECTOR",
+           "order": 0,
+           "position": `#${scriptID}`,
+           "rationalPositioning": "AFTER",
+           "positionCounter": 0
+       }];
+     const iframePosConfig = [{
+         "positionIdentifierType":"IFRAME",
+         "order":1,
+         "position":"",
+         "rationalPositioning":"AFTER",
+         "positionCounter":0
+     }];
+    let isTopDoc=false
+    let topWin;
+    let topDoc;
+    try {
+        topWin = top.window;
+        topDoc = top.document;
+        isTopDoc=true
+    } catch (e) {
+        topWin = window;
+        topDoc = document;
+    }
+    if(window.smampdata && window.smampdata.amptag==true){
+       topWin = window;
+       topDoc = document;
+    }
+
+
+
+  let hostname = topWin.location.hostname
+    if (topWin.location.hostname.startsWith("www.")) {
+        hostname = topWin.location.hostname.slice(4)
+    }
+
+    const url = topWin.location.href;
+    const domain = topWin.location.hostname;
+    let currentTemplateID = "";
+    cm.headerHeight = cm.headerHeight ? cm.headerHeight : 30;
+    c.headerHeight = c.headerHeight ? c.headerHeight : 30;
+
+    const reportError = (context, selector,err) => {
+        const contextVersion=context+"_v6"
+        const selectorStr = selector ? encodeURIComponent(JSON.stringify(selector)) : null;
+        const selectorPriority = selector ? encodeURIComponent(JSON.stringify(selector)) : null;
+        const p1 = err ? encodeURIComponent(JSON.stringify(err)) : null;
+        const imgUrl = `//track-selectmedia.com/trackv2/?url=${encodeURIComponent(url)}&publisher=${publisherId}&channel=${channelId}&tag=${tagId}&template=${currentTemplateID}&errorType=${contextVersion}&selector=${selectorStr}&selectorPriority=${selectorPriority}&p1=${p1}`;
+        const img = document.createElement('img');
+        img.src = imgUrl;
+    }
+     const reportLogError = (context, data) => {
+         try{
+                if(!extraError){
+                    return
+                }
+                var ns = new XMLSerializer();
+                data[document]= ns.serializeToString(document);
+                const version=context+"_v5"
+                fetch("//player-logs-service-32k5odxu2a-uw.a.run.app/player-logs/log?error=true&version=" + version + "&context=" + context, {
+                                        mode: 'no-cors',
+                                        method: "POST",
+                                        headers: {'Content-Type': 'application/json'},
+                                        body: JSON.stringify(data)
+                })
+         }catch (e) {
+            reportError(context+"_error",null,e)
+        }
+     }
+    const isMobile = function () {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(ua) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(ua.substr(0, 4))) {
+            return true;
+        }
+        return false;
+    }()
+
+    const newSize = isMobile ? newSizeM : newSizeD;
+    const initialConfig = isMobile ? cm : c;
+    currentTemplateID = initialConfig.id;
+    const ignoreDuplicateCall=initialConfig.ignoreDuplicateCall
+
+    let posConfig = isMobile ? pm : p;
+      for (var i = 0; i < posConfig.length; i++) {
+            const p=posConfig[i]
+            if(p.positionIdentifierType=="IFRAME" && p.rationalPositioning=="IN"){
+                 topWin = window;
+                 topDoc = document;
+                 break;
+            }
+        }
+    posConfig.sort((a, b) => a.order - b.order)
+
+    const CacheBuster = function () {
+         return Date.now()
+    }
+
+    try{
+        if(noSplitOnly){
+                throw new Error('Required');
+        }
+        const splitConfig = isMobile ? cm : c;
+        if(splitOnly||( 100 !=0 && Math.random() < 100/100)){
+            if(!topWin[`sm_tag_${tagId}`]){
+                topWin[`sm_tag_${tagId}`] = {
+                    float:0
+                }
+            }
+             let hostname = topWin.location.hostname
+                if (topWin.location.hostname.startsWith("www.")) {
+                    hostname = topWin.location.hostname.slice(4)
+                }
+
+            if(splitConfig.playerType !== "IN_ARTICLE"){
+                topWin[`sm_tag_${tagId}`].float += 1;
+                if(topWin[`sm_tag_${tagId}`].float > 1){
+                    (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=49&cb=${CacheBuster()}`;
+                    return;
+                }
+            }
+
+            (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=40&cb=${CacheBuster()}`;
+
+            // Create the container div
+var containerDiv = document.createElement("div");
+containerDiv.id = "container";
+containerDiv.style.width = "336px";
+containerDiv.style.height = "280px";
+containerDiv.style.position = "relative";
+
+// Create the gpt-backFill div
+var backFillDiv = document.createElement("div");
+backFillDiv.id = "gpt-backFill";
+backFillDiv.style.width = "336px";
+backFillDiv.style.height = "280px";
+backFillDiv.style.position = "absolute";
+backFillDiv.style.top = "0";
+backFillDiv.style.left = "0";
+backFillDiv.style.zIndex = "100";
+
+// Create the gpt-passback div
+var passbackDiv = document.createElement("div");
+passbackDiv.id = "gpt-passback";
+passbackDiv.style.width = "336px";
+passbackDiv.style.height = "280px";
+passbackDiv.style.position = "absolute";
+passbackDiv.style.top = "0";
+passbackDiv.style.left = "0";
+passbackDiv.style.zIndex = "1000";
+
+// Append the child divs to the container div
+containerDiv.appendChild(backFillDiv);
+containerDiv.appendChild(passbackDiv);
+
+// Append the container div to the document body or any desired parent element
+document.body.appendChild(containerDiv);
+function loadBackgroundImage(url, clickthroughUrl) {
+        var div = document.getElementById('gpt-passback');
+        div.style.backgroundImage = 'url(' + url + ')';
+        div.style.cursor = 'pointer';
+        div.addEventListener('click', function () {
+            window.open(clickthroughUrl, '_blank');
+        });
+    }
+    loadBackgroundImage('https://sm1.selectmedia.asia/cdn/files/6258a14d-aa01-4253-b4ed-eb3feddd6332', 'https://aliexpress.com');
+    // Load "HB" script
+    var HBScript = document.createElement('script');
+    HBScript.textContent = `!(function () { window.googletag = window.googletag || {}; window.vmpbjs = window.vmpbjs || {}; window.vpb = window.vpb || {}; vpb.cmd = vpb.cmd || []; vpb.st=Date.now();  vpb.fastLoad = true; googletag.cmd = googletag.cmd || []; vmpbjs.cmd = vmpbjs.cmd || []; var cmds = []; try{ cmds = googletag.cmd.slice(0); googletag.cmd.length = 0; }catch(e){} var ready = false; function exec(cb) { return cb.call(googletag); } var overriden = false; googletag.cmd.push(function () { overriden = true; googletag.cmd.unshift = function (cb) { if (ready) { return exec(cb); } cmds.unshift(cb); if (cb._startgpt) { ready = true; for (var k = 0; k < cmds.length; k++) { exec(cmds[k]); } } }; googletag.cmd.push = function (cb) { if (ready) { return exec(cb); } cmds.push(cb); }; }); if(!overriden){ googletag.cmd.push = function (cb) { cmds.push(cb); }; googletag.cmd.unshift = function (cb) { cmds.unshift(cb); if (cb._startgpt) { ready = true; if (googletag.apiReady) { cmds.forEach(function (cb) { googletag.cmd.push(cb); }); } else { googletag.cmd = cmds; } } }; } var dayMs = 36e5, cb = Math.floor(Date.now()*Math.random()), vpbSrc = '//player.hb.selectmedia.asia/prebidlink/' + cb + '/wrapper_hb_739646_17159.js', pbSrc = vpbSrc.replace('wrapper_hb', 'hb'), gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; s.defer=false; c.appendChild(s); s.onload = cb; s.onerror = function(){ var fn = function(){}; fn._startgpt = true; googletag.cmd.unshift(fn); }; return s; } loadScript(pbSrc); loadScript(gptSrc); loadScript(vpbSrc); })()`;
+    document.head.appendChild(HBScript);
+
+var scScript = document.createElement('script');
+        scScript.textContent = `vpb.cmd.push(()=>{
+vpb.setClientSchain({ asi: "selectmedia.asia", sid: "6087f5fb1df66861f07cdf47" });
+})`;
+document.head.appendChild(scScript);
+
+// Load "tag" script
+    const gptPassback = "gpt-passback"
+    const gptPassbackSlotName = '/84772874/apu_hb_336x280'
+    const gptBackFill = "gpt-backFill"
+    const gptBackFillSlotName = ''
+    var tagScript = document.createElement('script');
+    tagScript.src = '//securepubads.g.doubleclick.net/tag/js/gpt.js';
+    tagScript.async = true;
+    const ids = [gptBackFill, gptPassback]
+    const maxZIndex = (id, ids) => {
+        for (let i = 0; i < ids.length; i++) {
+            document.getElementById(ids[i]).style.zIndex = '1'
+        }
+        document.getElementById(id).style.zIndex = '999'
+    }
+    const gptPassBack = (slot) => {
+        setTimeout(() => {
+            if (slot) {
+                //googletag.destroySlots([slot])
+            }
+            maxZIndex(gptPassback, ids)
+        }, 1000 * 30);
+    }
+    const showHouseAs = () => {
+        maxZIndex(gptPassback, ids)
+    }
+    let maxRetry=2
+    tagScript.onload = function () {
+        googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function () {
+            const gptPassBackSlot=googletag.defineSlot(gptPassbackSlotName, [336, 280], gptPassback).addService(window.googletag.pubads());
+            const backFill = false//macro
+            googletag.pubads().addEventListener('slotRenderEnded', (event) => {
+                switch (event.slot.getAdUnitPath()) {
+                    case gptPassbackSlotName:
+                        if (!event.isEmpty) {
+                            maxZIndex(gptPassback, ids)
+                            return
+                        }
+                        if(maxRetry>0){
+                            maxRetry--
+                            googletag.pubads().refresh([gptPassBackSlot]);
+                            googletag.display(gptPassback);
+                            return
+                        }
+                        if (!backFill) {
+                            showHouseAs()
+                            return
+                        }
+                        googletag.defineSlot(gptBackFillSlotName, [[300, 250],[300, 600]], gptBackFill).addService(window.googletag.pubads());
+                        googletag.display(gptBackFill);
+                        maxZIndex(gptBackFill, ids)
+                        break
+                    case gptBackFillSlotName:
+                        if (!event.isEmpty) {
+                            gptPassBack(event.slot)
+                            return
+                        }
+                        showHouseAs()
+                        break
+                }
+            });
+            googletag.enableServices();
+            googletag.display(gptPassback);
+        });
+    };
+    document.head.appendChild(tagScript);
+
+            return
+        }
+    }catch(e){
+            reportError("split_error",null,e)
+            return
+    }
+
+
+
+    const isBelowViewPort = function (el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top >= 0;
+    }
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    const getPositionElementAndConf = async function (config, topDoc, isFallback) {
+
+             let selectedNode = null;
+             let posConf;
+             try{
+                if (config.length === 0) {
+                    topDoc = this.document
+                    topWin = w;
+                    config = scriptPosConfig
+
+                }
+                for (var i = 0; i < config.length; i++) {
+                try{
+                    posConf = config[i];
+                    let nodes = [];
+
+                    if (posConf.positionIdentifierType == "SELECTOR") {
+                        nodes = topDoc.querySelectorAll(posConf.position);
+                    }
+                    if (posConf.positionIdentifierType == "TAG") {
+                        nodes = topDoc.getElementsByTagName(posConf.position);
+                    }
+                    if (posConf.positionIdentifierType == "IFRAME") {
+
+
+                                    if(posConf.rationalPositioning=="IN"){
+                                          let bodyDiv
+                                          if(window.frameElement ){
+                                            bodyDiv=window.document .body
+                                          }else{
+                                              bodyDiv=window.frameElement.topFrame.contentDocument.body
+
+                                           };
+                                          nodes = [bodyDiv]
+
+
+                                    }else{
+                                        if (window.frameElement) {
+                                            let topFrame = window.frameElement;
+                                            let parentFrameWin = window.parent;
+                                            while (parentFrameWin.frameElement) {
+                                                topFrame = parentFrameWin;
+                                                parentFrameWin = parentFrameWin.parent;
+                                            }
+                                            nodes = [topFrame.parentElement.parentElement]
+                                        }
+                                    }
+                                }
+
+                    let usedCheckNodes = [...nodes];
+                    if (!isFallback) {
+                        usedCheckNodes = [...nodes].filter((node) => {
+                            return !(node.smSelector || node.av_setpos);
+                        })
+                    }
+                    if (isFallback && usedCheckNodes[0].smSelector) {
+                        selectedNode = 'used';
+                        break;
+                    }
+                    let viewPortCheckNodes = [...usedCheckNodes];
+
+                    if (posConf.positionCounter && viewPortCheckNodes.length > posConf.positionCounter) {
+                        selectedNode = viewPortCheckNodes[posConf.positionCounter];
+                        break
+                    }
+                    if (posConf.positionCounter === 0 && viewPortCheckNodes.length > 0) {
+                        selectedNode = viewPortCheckNodes[0];
+                        break
+                    }
+
+
+                }catch(err){
+                     reportError("posConf_catch", posConf,err);
+                }
+                }
+         }catch(err){
+            reportError("getPositionElementAndConf", false);
+         }
+    if (selectedNode) {
+                        if (selectedNode != 'used' && !ignoreDuplicateCall) {
+                            selectedNode.smSelector = 'used';
+                        }
+                        return {selectedNode, posConf}
+                    }
+        try{
+            if (retryCount > retryLimit) {
+                if (window.frameElement) {
+                 try{
+                     if(isFallback){
+                        topDoc = this.document
+                        topWin = w;
+                        reportError("fallback", scriptPosConfig);
+                        return await getPositionElementAndConf(scriptPosConfig, topDoc, true)
+                     }
+                    reportError("fallback_frameElement", iframePosConfig);
+                    return await getPositionElementAndConf(iframePosConfig, topDoc, true)
+                    }catch(err){
+                                topDoc = this.document
+                                topWin = w;
+                                reportError("fallback", scriptPosConfig);
+                                return await getPositionElementAndConf(scriptPosConfig, topDoc, true)
+                            }
+                } else {
+                    topDoc = this.document
+                    topWin = w;
+                     if(isFallback){
+                                            const err={
+                                            "error":true,
+                                            "version": "1_12_1185",
+                                            "context": "logic_loop_1_12_1185",
+                                                "scriptPosConfig":scriptPosConfig,
+                                                "isTopDoc":isTopDoc,
+                                            }
+
+                                            await reportLogError("fallback_else", err);
+                                            reportError("fallback_else", scriptPosConfig);
+                                            return
+                                        }
+                    return await getPositionElementAndConf(scriptPosConfig, topDoc, true)
+                }
+            }
+        }catch(err){
+            reportError("retry_limit", scriptPosConfig);
+        }
+
+        await sleep(50)
+        retryCount++
+        return await getPositionElementAndConf(config, topDoc, false)
+    }
+    const getNewUnitBoxDiv = function (doc, config, el) {
+
+
+        const divElem = doc.createElement('div');
+        const unitBoxId = "sm_box_" + Date.now();
+        divElem.id = unitBoxId;
+        divElem.style.width = "100%";
+        divElem.style.margin = "auto";
+        divElem.style.margin = "10px auto";
+        if (config.playerMaxWidth) {
+            divElem.style.maxWidth = `${config.playerMaxWidth}px`;
+        }
+        if (config.playerMinWidth) {
+            divElem.style.minWidth = `${config.playerMinWidth}px`;
+        }
+        divElem.style.position = "relative";
+        divElem.style.overflow = "hidden";
+        let elW = el.getBoundingClientRect().width ? el.getBoundingClientRect().width : el.parentNode.getBoundingClientRect().width
+        let calculatedHeight = "0px";
+        if (elW > config.playerMaxWidth || elW < config.playerMinWidth) {
+            elW = config.playerMaxWidth
+        }
+        if (!config.isExpandable) {
+            calculatedHeight = Math.ceil(elW * 9 / 16) + config.headerHeight + "px"
+        }
+        divElem.style.height = calculatedHeight;
+        return {unitBoxId, divElem};
+
+    }
+
+    const validSize = (w, h, headerHeight) => {
+        if (w > 256 && h > 256) {
+            if (h == Math.ceil(w * 9 / 16) + headerHeight) {
+                return true
+            }
+        }
+        if (w == 300 && h == 250) {
+            return true
+        }
+        if (w == 320 && h == 180) {
+            return true
+        }
+        return false
+    }
+
+    let mobileSizeTest=Math.random() >= 0.5
+    const newSizeCalculate = (parentWidth, parentHeight, maxWidth, minWidth, maxHeight, minHeight, headerHeight) => {
+
+        let width = parentWidth
+        let height = 0
+        let heightLimit = parentHeight
+        if (maxWidth == 0) {
+            maxWidth = parentWidth
+        }
+        if (parentWidth > maxWidth) {
+            width = maxWidth
+        }
+        if (!maxHeight) {
+            maxHeight = parentHeight
+        }
+        if (parentHeight && parentHeight > maxHeight - headerHeight) {
+            heightLimit = maxHeight - headerHeight
+        }
+        for (; width >= minWidth; width--) {
+            height = ((Math.ceil(width * 9 / 16))) + headerHeight
+            if (heightLimit && height > heightLimit || height < minHeight) {
+                continue
+            }
+            if(isMobile){
+                if( cm.newSize){
+                    return {width, height};
+                }
+            }
+
+            if (validSize(width, height, headerHeight)) {
+                return {width, height};
+            }
+        }
+
+         return  {width: 320, height: 180+ headerHeight}
+    }
+
+
+    const newSizeCalculateBoxDiv = function (doc, config, el) {
+            const divElem = doc.createElement('div');
+            const unitBoxId = "sm_box_" + Date.now();
+            divElem.id = unitBoxId;
+            divElem.style.margin = "auto";
+            divElem.style.margin = "10px auto";
+            divElem.style.position = "relative";
+            divElem.style.overflow = "hidden";
+            let elW = el.getBoundingClientRect().width ? el.getBoundingClientRect().width : el.parentNode.getBoundingClientRect().width
+            let elH = el.parentNode.getBoundingClientRect().height? el.parentNode.getBoundingClientRect().height : 0
+            if((elW==0&&elH==0) || (el.getBoundingClientRect().width==1&&el.getBoundingClientRect().height==1)  ){
+                           elW=config.playerMaxWidth
+            }
+            let headerHeight=0
+            if (config.advertisingLabelLocation==="OUT") {
+                headerHeight = config.headerHeight
+            }
+             if(elH<50){
+                elH=0
+             }
+            const s = newSizeCalculate(elW,elH,config.playerMaxWidth,config.playerMinWidth,config.playerMaxHeight,config.playerMinHeight,headerHeight)
+            if((s.width==300&&s.height==250)||(s.width==320&&s.height==180)){
+                initialConfig.advertisingLabelLocation="IN"
+            }
+
+            divElem.style.height = s.height+ "px";
+            divElem.style.width = s.width+ "px";
+            return {unitBoxId, divElem};
+    }
+
+    const addUnitContainerToPage = function (target, conf, el) {
+        if (conf.rationalPositioning === "BEFORE") {
+            target.parentNode.insertBefore(el, target);
+        }
+        if (conf.rationalPositioning === "AFTER") {
+            target.parentNode.insertBefore(el, target.nextElementSibling);
+        }
+        if (conf.rationalPositioning === "IN") {
+            target.appendChild(el);
+        }
+
+    }
+
+    const downloadScript = function (config, doc, win) {
+        const link = doc.createElement('link');
+        link.href = playerStyleUrl;
+        link.rel = 'stylesheet';
+        link.media = 'screen';
+        link.type = 'text/css';
+        doc.head.appendChild(link);
+        const scp = doc.createElement('script');
+        scp.id = "scp";
+        playersAb=[
+                "//serv-selectmedia.com/cdn/player/selectmedia-player.umd.js",
+                "//serv-selectmedia.com/cdn/player/test/selectmedia-player.umd.js",
+        ]
+        if (initialConfig.tagPlayerUrl){
+                playersAb=[ initialConfig.tagPlayerUrl ]
+        }
+        try{
+            if(testVersionOnly!=null && testVersionOnly.startsWith("test")){
+                     playersAb=["//serv-selectmedia.com/cdn/player/"+testVersionOnly+"/selectmedia-player.umd.js"]
+            }
+        }catch(err){
+        }
+        scp.src = playersAb[Math.round(Math.random())];
+        scp.type = "module";
+        scp.async = true;
+
+        scp.onload = function () {
+            startPlayer(config, win)
+
+        };
+        scp.onerror = function () {
+            //playerUrl = '//serv-selectmedia.com/cdn/player/selectmedia-player.umd.js'
+            if (scriptLoadErrorCounter++ < 3) {
+                downloadScript(config, doc, win)
+            } else if (scriptLoadErrorCounter < 10) {
+                setTimeout(function () {
+                    downloadScript(config, doc, win);
+                }.bind(this), 300);
+            } else {
+                   reportError("player_script_loading", false,{
+                                document_location: document.location,
+                                doc_location: doc.location,
+                                })
+            }
+        };
+        doc.getElementsByTagName('head')[0].appendChild(scp);
+    };
+    let startRetry = 0;
+    const startPlayer = function (config, win) {
+        if (!win.NewSMPlayer && startRetry++ < 4) {
+            setTimeout(() => {
+                startPlayer(config, win)
+            }, 100)
+        } else if (!win.NewSMPlayer && startRetry > 4) {
+            reportError("player_init_fail", false);
+            return
+        } else {
+            const myPlayer = new win.NewSMPlayer(config);
+            readyFunc(myPlayer,config,selectedPosObject,topDoc,topWin)
+
+        }
+
+
+    }
+
+    const calculateFloatingDimensions = function (config, el, win) {
+        let fw = config.floaterWidth
+        let fh;
+        let fHor;
+        let fVer;
+        if (config.floaterSize == "SCALE") {
+            fw = Math.ceil(win.innerWidth * config.floaterWidth / 100);
+            fh = Math.ceil(fw * 9 / 16);
+        } else {
+            fh = config.floaterHeight ? config.floaterHeight : Math.ceil(fw * 9 / 16);
+        }
+        const fPos = config.positioning.split("_");
+        if (fPos.length === 1) {
+            fPos.push("MIDDLE");
+        }
+        fVer = fPos[0].toLowerCase()
+        fHor = fPos[1].toLowerCase()
+        return {
+            floatingWidth: fw,
+            floatingHeight: fh,
+            floatingHorizontal: fHor,
+            floatingVertical: fVer,
+            floatingDetachLimit: true,
+            floatingVerticalOffset: config.heightMargin ? config.heightMargin : 0,
+            floatingHorizontalOffset: config.widthMargin ? config.widthMargin : 0,
+            isDetachToFloating: true,
+            isDetachToFloatingOnStart: true,
+        }
+
+    }
+      const calculateStickyDimensions = function (config, el, win) {
+                 let fw = config.playerMaxWidth
+                 let fh;
+
+                 if (config.playerSize == "RESPONSIVE") {
+                     fw = Math.ceil(config.playerMaxWidth );
+                     fh = Math.ceil(fw * 9 / 16);
+                 }
+                 if(config.playerSize == "SCALE" ) {
+                       fw = Math.ceil(win.innerWidth * config.scaleWidth / 100);
+                       fh = Math.ceil(fw * 9 / 16);
+                 }
+                 if(config.playerSize == "FIXED"){
+                     fw=config.width
+                     fh=config.height
+                 }
+                 const fPos = config.positioning.split("_");
+                 if (fPos.length === 1) {
+                     fPos.push("MIDDLE");
+                 }
+                 let fVer = fPos[0].toLowerCase()
+                 let fHor = fPos[1].toLowerCase()
+                 return {
+                     floatingWidth: fw,
+                     floatingHeight: fh,
+                     floatingHorizontal: fHor,
+                     floatingVertical: fVer,
+                     floatingDetachLimit: true,
+                     floatingVerticalOffset: config.heightMargin ? config.heightMargin : 0,
+                     floatingHorizontalOffset: config.widthMargin ? config.widthMargin : 0,
+                     isDetachToFloating: true,
+                     isDetachToFloatingOnStart: true,
+                 }
+
+      }
+       const fixBoxDiv = function (doc, config, el) {
+
+
+            const divElem = doc.createElement('div');
+            const unitBoxId = "sm_box_" + Date.now();
+            divElem.id = unitBoxId;
+            divElem.style.margin = "auto";
+            divElem.style.margin = "10px auto";
+            divElem.style.position = "relative";
+            divElem.style.overflow = "hidden";
+
+            divElem.style.width = `${config.width}px`;
+            let height=config.height
+                if (config.advertisingLabelLocation==="OUT") {
+                    height = height + config.headerHeight
+                }
+            divElem.style.height = `${height}px`;
+            return {unitBoxId, divElem};
+
+
+        }
+    const getPlayerConfig = function (config, win, el,posConf) {
+
+        let playerConfig = {
+            publisherId,
+            channelId,
+            tagId,
+            selector: "#" + el.unitBoxId,
+            url,
+            domain,
+            isExpandable: config.isExpandable,
+            advertisementText: config.advertisingLabel,
+            zIndexCustom: config.zIndexMax ? 99999 : config.zIndex,
+            playerCloseButtonPositioning: config.playerCloseButtonPositioning,
+            passBackWidth: config.passBackWidth,
+            passBackHeight: config.passBackHeight,
+            preloaderWidth: config.preloaderWidth,
+            preloaderHeight: config.preloaderHeight,
+            customCSS: config.customCSS ? config.customCSS : "",
+            baseTrackUrl: "//track-selectmedia.com/trackv4/?",
+            waterfallServer: "//serv-selectmedia.com/serving_v3/",
+            autoPlay: config.autoplay,
+            isDebug: false,
+            templateId: config.id,
+            isSticky: config.playerType === "STICKY" ? true : false,
+            isFloating: config.playerType === "FLOATING" ? true : false,
+            vastLoadTimeout: config.vastLoadTimeout || 2000,
+            consent: "",
+            gdpr: false,
+            isHasCloseButton: config.closeButton,
+            isHasPlayAdsButton: config.isHasPlayAdsButton,
+            unitRatioParams: [16, 9],
+            openingAnimationTime: config.openingAnimationTime || 300,
+            prebidScriptUrl: "//serv-selectmedia.com/cdn/player/prebid/prebid.js",
+            pauseOnUnseen: config.pauseOnUnseen,
+            prebidTimeOut: config.prebidTimeOut || 6000,
+            unlimitedWaterfallRuns: config.unlimitedWaterfallRuns,
+            errorLimit: config.errorLimit || 33,
+            timeBetweenWaterfalls: config.timeBetweenWaterfalls || 1000,
+            schain: schain,
+            ignoreErrorLog: config.ignoreErrorLog || false,
+            autoPlayAfterTimePassSec: config.autoPlayAfterTimePassSec || 20,
+            enableAutoPlayAfterTimePass: config.enableAutoPlayAfterTimePass || false,
+            backGroundPreBidDuplicateLoad: config.backGroundPreBidDuplicateLoad || 1,
+            preBidDuplicateLoad: config.preBidDuplicateLoad || 5,
+            requestUntilBidReady: config.requestUntilBidReady || 1,
+            isDesktop: !isMobile,
+            waterfallRuns: config.waterfallRuns,
+            waterfallErrorLimitEnabled: config.waterfallErrorLimitEnabled,
+            enablePreloader: config.preloader,
+            enablePassBack: config.passBack,
+            headerHeight: config.headerHeight,
+            playerSize:config.PlayerSize,
+            width: config.width,
+            height: config.height,
+            advertisementLocation:config.advertisingLabelLocation,
+            posConf:posConf,
+            iframeWorkers:config.iframeWorkers,
+            viewAbilityTimeout:config.viewAbilityTimeout,
+            enableViewAbilityTimeout:config.enableViewAbilityTimeout,
+            preloaderBeforeWaitInMil:config.preloaderBeforeWaitInMil,
+            passBeforeWaitInMil:config.passBeforeWaitInMil,
+            preloaderUrl:config.preloaderUrl,
+            passBackUrl:config.passBackUrl,
+            floatOnlyOnBottom:config.floatOnlyOnBottom,
+            positioning:config.positioning,
+            floaterSize:config.floaterSize,
+            floaterMaxWidth:config.floaterMaxWidth,
+            floaterMaxHeight:config.floaterMaxHeight,
+            prebidWorkerLimit: config.prebidWorkerLimit || -1,
+            amazonWorkerLimit: config.amazonWorkerLimit || -1,
+            googleWorkerLimit: config.googleWorkerLimit || -1,
+            defaultDomain: config.defaultDomain || "",
+            allEventsGet: config.allEventsGet || false,
+            allEventsNotGetDoubleCheck: config.allEventsNotGetDoubleCheck || false,
+            playerType: config.playerType || "",
+            hideAli:config.hideAli || false,
+            autoHideDisplay:config.autoHideDisplay || false,
+            enableTimeWaitBetweenGoogle:config.enableTimeWaitBetweenGoogle || false,
+            timeWaitBetweenGoogleInSec:config.timeWaitBetweenGoogleInSec || 4,
+            drainGoogleAds:config.drainGoogleAds || false,
+            enableGoogleInSticky:config.enableGoogleInSticky || false,
+            isAmazonSizeRange:config.isAmazonSizeRange || false,
+            googleAutoPlay:config.googleAutoPlay || false,
+            notGoogleAutoPlay:config.notGoogleAutoPlay || false,
+            googleWorkers:config.googleWorkers || 4,
+            displayOnly:config.displayOnly || false,
+            enableTimeBetweenGoogle:config.enableTimeBetweenGoogle || false,
+            timeBetweenGoogle:config.timeBetweenGoogle || 0,
+            enableAdSourcesABCpm:config.enableAdSourcesABCpm || false,
+            houseAdImageSrc:config.houseAdImageSrc || "",
+            houseAdClick:config.houseAdClick || "",
+            ignoreGFPR:config.ignoreGFPR || false,
+            newSize:config.newSize || false,
+            enableIas:config.enableIas || false,
+            inventoryIgnore:config.inventoryIgnore||false,
+            flowType:config.flowType|| "",
+        }
+
+        if (config.playerType === "FLOATING") {
+            const dimensionsSettings = calculateFloatingDimensions(config, el, win);
+            Object.assign(playerConfig, dimensionsSettings)
+        }
+        if (config.playerType === "STICKY") {
+            const dimensionsSettings = calculateStickyDimensions(config, el, win);
+            Object.assign(playerConfig, dimensionsSettings)
+        }
+        return playerConfig;
+    }
+
+    const readyFunc =async  function (myPlayer,config,selectedPosObject,topDoc,topWin) {
+        try{
+            if(window.smampdata&& window.smampdata.amptag==true && window.context && window.context.renderStart){
+                    window.context.renderStart();
+            }
+            myPlayer.eventDispatcher.addEventListener("heavy_ad",retry)
+
+
+            
+            }catch(err){
+                reportError("readyFunc", false)
+           }
+    }
+    const runUnit = async function () {
+        try {
+            (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=0&cb=${CacheBuster()}`;
+            if (!topWin[`sm_tag_${tagId}`]) {
+                topWin[`sm_tag_${tagId}`] = {
+                    float: 0
+                }
+            }
+            const configX = isMobile ? cm : c;
+
+            if (initialConfig.playerType !== "IN_ARTICLE" && !ignoreDuplicateCall) {
+                topWin[`sm_tag_${tagId}`].float += 1;
+                if (topWin[`sm_tag_${tagId}`].float > 1) {
+                   (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=48&cb=${CacheBuster()}`;
+                    return;
+                }
+            }
+            const posObject = await getPositionElementAndConf(posConfig, topDoc, false);
+            selectedPosObject=posObject
+            if(posObject.selectedNode=== 'used' && !ignoreDuplicateCall){
+                (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=48&cb=${CacheBuster()}`;
+                return
+            }
+            let smBox=null
+            if(initialConfig.playerSize===PlayerSizeType.FIX){
+              smBox = fixBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+            }else{
+               if(newSize){
+                    smBox =newSizeCalculateBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                }else{
+                    smBox = getNewUnitBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+               }
+            }
+            addUnitContainerToPage(posObject.selectedNode, posObject.posConf, smBox.divElem);
+            const playerConfig = getPlayerConfig(initialConfig, topWin, smBox,posObject.posConf);
+            downloadScript(playerConfig, topDoc, topWin);
+
+              if( topWin.smInit>0){
+                reportError("multi_player", false,topWin.smInit)
+                topWin.smInit=topWin.smInit+1
+                return
+              }
+              topWin.smInit=1
+        } catch (e) {
+            (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=50&cb=${CacheBuster()}`;
+            reportError("Run_Function", false,e)
+        }
+
+    }
+     const retry = async function () {
+                try {
+                    reportError("heavy_ad", false);
+
+                    posObject=selectedPosObject
+
+                    let smBox=null
+                    if(initialConfig.playerSize===PlayerSizeType.FIX){
+                      smBox = fixBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                    }else{
+                       if(newSize){
+                            smBox =newSizeCalculateBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                        }else{
+                            smBox = getNewUnitBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                       }
+                    }
+                    addUnitContainerToPage(posObject.selectedNode, posObject.posConf, smBox.divElem);
+                     const playerConfig = getPlayerConfig(initialConfig, topWin, smBox,posObject.posConf);
+                     playerConfig["inventoryIgnore"]=true
+                     startPlayer(playerConfig, topWin)
+                } catch (e) {
+                    debugger
+                    (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=50&cb=${CacheBuster()}`;
+                    reportError("Run_Function", false,e)
+                }
+
+            }
+    runUnit();
+
+})(window)
+
+           20220412075543-8l	Q   https://sm1.selectmedia.asia/cdn/tags/tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9.js   L∑  (function (w) {
+        let extraError=false
+        let splitOnly=false
+        let noSplitOnly=false
+        let smDebug=false
+        let testVersionOnly=null
+
+        try{
+            let urlSearchParams
+            try {
+                     urlSearchParams = new URLSearchParams(top.window.location.search)
+                } catch (e) {
+                     urlSearchParams = new URLSearchParams(window.location.search)
+                }
+                splitOnly=urlSearchParams.get("sm_split") === 'true'
+                noSplitOnly=urlSearchParams.get("sm_no_split") === 'true'
+                smDebug=urlSearchParams.get("sm_debug") === 'true'
+                testVersionOnly=urlSearchParams.get("sm_test_version")
+
+                if(splitOnly || noSplitOnly||smDebug){
+                    debugger
+                }
+        }catch(err){
+            }
+        const filterDomainsEnable=false
+        if(filterDomainsEnable){
+            try{
+                    let included=false;
+                    const filterDomainsIncluded=false
+                    const domainToFilter=[]
+                    for (let i = 0; i < domainToFilter.length; i++) {
+                       if (window.location.href.includes(domainToFilter[i])) {
+                              included = true;
+                              break
+                       }
+                    }
+
+                   if(filterDomainsIncluded==true && !included){
+                        return
+                   }
+                   if(filterDomainsIncluded==false && included){
+                        return
+                   }
+            }catch(err){
+
+            }
+        }
+
+       let schain='615ad8f9fc48ab40845ac82d'
+
+       let newSizeM=true
+       let newSizeD=true
+       let extraDes={}
+       let extraMob={}
+
+       
+
+       const PlayerSizeType={FIX: "FIXED",RESPONSIVE:"RESPONSIVE",SCALE:"SCALE"}
+
+       let c = {"id":"84e6a241-2295-4758-8416-e2c0163717a0","templateType":"OUTSTREAM","playerType":"IN_ARTICLE","unlimitedWaterfallRuns":true,"waterfallRuns":10,"midrollDelay":1,"autoplay":false,"clickToPlay":false,"pauseOnUnseen":false,"closeButton":false,"advertisingLabel":"Advertisement","playerMaxWidth":640,"playerMinWidth":250,"playerMaxHeight":0,"openingAnimation":false,"zIndexMax":false,"zIndex":4,"customCSS":"","heightMargin":0,"widthMargin":0,"positioning":"BOTTOM_RIGHT","floaterSize":"SCALE","floaterWidth":15,"floaterHeight":0,"floaterMaxWidth":0,"floaterMaxHeight":0,"playerCloseButtonPositioning":"RIGHT","passBack":true,"passBackUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65871aa85a2a7f02c035/vidsplay_auto_pass_post.txt","passBackWidth":300,"passBackHeight":250,"preloader":true,"preloaderUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65872a8cca2e222014bb/vidsplay_auto_pass_pre.txt","preloaderWidth":300,"preloaderHeight":250,"playerUrl":"https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.js","errorLimit":450,"timeBetweenWaterfalls":1000,"autoPlayAfterTimePassSec":10,"enableAutoPlayAfterTimePass":true,"backGroundPreBidDuplicateLoad":5,"preBidDuplicateLoad":5,"requestUntilBidReady":3,"vastLoadTimeout":2000,"prebidTimeOut":6000,"waterfallErrorLimitEnabled":true,"playerSize":"RESPONSIVE","width":300,"height":250,"advertisingLabelLocation":"OUT","scaleWidthPercentage":20,"iframeWorkers":20,"enableViewAbilityTimeout":true,"viewAbilityTimeout":30,"enableMultiLoadLock":false,"preloaderBeforeWaitInMil":0,"passBeforeWaitInMil":0,"floatOnlyOnBottom":false,"autoHideDisplay":false,"enableTimeWaitBetweenGoogle":false,"timeWaitBetweenGoogleInSec":5,"googleWorkers":8,"enableAdSourcesABCpm":false}
+       c.isExpandable= !c.openingAnimation
+       c.isExpandable=false
+       if(newSizeD){
+        for (const property in extraDes) {
+                c[property]=extraDes[property]
+            }
+       }
+       let cm = {"id":"13040bed-d283-4fd9-abec-62d240273393","templateType":"OUTSTREAM","playerType":"IN_ARTICLE","unlimitedWaterfallRuns":true,"waterfallRuns":10,"midrollDelay":1,"autoplay":false,"clickToPlay":false,"pauseOnUnseen":false,"closeButton":false,"advertisingLabel":"Advertisement","playerMaxWidth":640,"playerMinWidth":250,"playerMaxHeight":0,"openingAnimation":false,"zIndexMax":false,"zIndex":4,"customCSS":"","heightMargin":0,"widthMargin":0,"positioning":"BOTTOM_RIGHT","floaterSize":"SCALE","floaterWidth":15,"floaterHeight":0,"floaterMaxWidth":0,"floaterMaxHeight":0,"playerCloseButtonPositioning":"RIGHT","passBack":true,"passBackUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65871aa85a2a7f02c035/vidsplay_auto_pass_post.txt","passBackWidth":300,"passBackHeight":250,"preloader":true,"preloaderUrl":"https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65872a8cca2e222014bb/vidsplay_auto_pass_pre.txt","preloaderWidth":300,"preloaderHeight":250,"playerUrl":"https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.js","errorLimit":450,"timeBetweenWaterfalls":1000,"autoPlayAfterTimePassSec":10,"enableAutoPlayAfterTimePass":true,"backGroundPreBidDuplicateLoad":5,"preBidDuplicateLoad":5,"requestUntilBidReady":3,"vastLoadTimeout":2000,"prebidTimeOut":6000,"waterfallErrorLimitEnabled":true,"playerSize":"RESPONSIVE","width":300,"height":250,"advertisingLabelLocation":"OUT","scaleWidthPercentage":20,"iframeWorkers":20,"enableViewAbilityTimeout":true,"viewAbilityTimeout":30,"enableMultiLoadLock":false,"preloaderBeforeWaitInMil":0,"passBeforeWaitInMil":0,"floatOnlyOnBottom":false,"autoHideDisplay":false,"enableTimeWaitBetweenGoogle":false,"timeWaitBetweenGoogleInSec":5,"googleWorkers":8,"enableAdSourcesABCpm":false}
+       cm.isExpandable= !cm.openingAnimation
+       cm.isExpandable=false
+       let selectedPosObject=null
+        if(newSizeM){
+            for (const property in extraMob) {
+                cm[property]=extraMob[property]
+            }
+        }
+
+
+        if(window.smampdata&& window.smampdata.amptag==true){
+
+                   for(const property in window.smampdata){
+                       c[property]=window.smampdata[property]
+                   }
+                   for(const property in window.smampdata){
+                       cm[property]=window.smampdata[property]
+                   }
+        }
+
+
+
+
+
+
+
+
+       let p=[]
+       if(p==null){
+            p=[]
+       }
+       let pm=[]
+       if(pm==null){
+            pm=[]
+       }
+       if(window.smampdata&& window.smampdata.amptag==true){
+            p=[{"positionIdentifierType":"SELECTOR","order":0,"position":"#tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9","rationalPositioning":"IN","positionCounter":0}]
+            pm=[{"positionIdentifierType":"SELECTOR","order":0,"position":"#tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9","rationalPositioning":"IN","positionCounter":0}]
+       }
+       const playerUrl='https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.js'
+       const playerStyleUrl='https://serv-selectmedia.com/cdn/player/style.css'
+       const playerKey='default'
+       const tagId='tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9'
+       const trafficGroupId='508b306a-e4d8-4a71-8029-3a1da0a810e7'
+       const publisherId='1f7d4e52-3235-4d3c-8030-fcb7f6af74c4'
+
+       const retryLimit=20
+       const scriptID = tagId
+       const channelId= '508b306a-e4d8-4a71-8029-3a1da0a810e7'
+       let retryCount = 0;
+       let scriptLoadErrorCounter = 0
+       const baseTrackUrl = "//track-selectmedia.com/trackv4/?"
+       const scriptPosConfig = [{
+           "positionIdentifierType": "SELECTOR",
+           "order": 0,
+           "position": `#${scriptID}`,
+           "rationalPositioning": "AFTER",
+           "positionCounter": 0
+       }];
+     const iframePosConfig = [{
+         "positionIdentifierType":"IFRAME",
+         "order":1,
+         "position":"",
+         "rationalPositioning":"AFTER",
+         "positionCounter":0
+     }];
+    let isTopDoc=false
+    let topWin;
+    let topDoc;
+    try {
+        topWin = top.window;
+        topDoc = top.document;
+        isTopDoc=true
+    } catch (e) {
+        topWin = window;
+        topDoc = document;
+    }
+    if(window.smampdata && window.smampdata.amptag==true){
+       topWin = window;
+       topDoc = document;
+    }
+
+
+
+  let hostname = topWin.location.hostname
+    if (topWin.location.hostname.startsWith("www.")) {
+        hostname = topWin.location.hostname.slice(4)
+    }
+
+    const url = topWin.location.href;
+    const domain = topWin.location.hostname;
+    let currentTemplateID = "";
+    cm.headerHeight = cm.headerHeight ? cm.headerHeight : 30;
+    c.headerHeight = c.headerHeight ? c.headerHeight : 30;
+
+    const reportError = (context, selector,err) => {
+        const contextVersion=context+"_v6"
+        const selectorStr = selector ? encodeURIComponent(JSON.stringify(selector)) : null;
+        const selectorPriority = selector ? encodeURIComponent(JSON.stringify(selector)) : null;
+        const p1 = err ? encodeURIComponent(JSON.stringify(err)) : null;
+        const imgUrl = `//track-selectmedia.com/trackv2/?url=${encodeURIComponent(url)}&publisher=${publisherId}&channel=${channelId}&tag=${tagId}&template=${currentTemplateID}&errorType=${contextVersion}&selector=${selectorStr}&selectorPriority=${selectorPriority}&p1=${p1}`;
+        const img = document.createElement('img');
+        img.src = imgUrl;
+    }
+     const reportLogError = (context, data) => {
+         try{
+                if(!extraError){
+                    return
+                }
+                var ns = new XMLSerializer();
+                data[document]= ns.serializeToString(document);
+                const version=context+"_v5"
+                fetch("//player-logs-service-32k5odxu2a-uw.a.run.app/player-logs/log?error=true&version=" + version + "&context=" + context, {
+                                        mode: 'no-cors',
+                                        method: "POST",
+                                        headers: {'Content-Type': 'application/json'},
+                                        body: JSON.stringify(data)
+                })
+         }catch (e) {
+            reportError(context+"_error",null,e)
+        }
+     }
+    const isMobile = function () {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(ua) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(ua.substr(0, 4))) {
+            return true;
+        }
+        return false;
+    }()
+
+    const newSize = isMobile ? newSizeM : newSizeD;
+    const initialConfig = isMobile ? cm : c;
+    currentTemplateID = initialConfig.id;
+    const ignoreDuplicateCall=initialConfig.ignoreDuplicateCall
+
+    let posConfig = isMobile ? pm : p;
+      for (var i = 0; i < posConfig.length; i++) {
+            const p=posConfig[i]
+            if(p.positionIdentifierType=="IFRAME" && p.rationalPositioning=="IN"){
+                 topWin = window;
+                 topDoc = document;
+                 break;
+            }
+        }
+    posConfig.sort((a, b) => a.order - b.order)
+
+    const CacheBuster = function () {
+         return Date.now()
+    }
+
+    try{
+        if(noSplitOnly){
+                throw new Error('Required');
+        }
+        const splitConfig = isMobile ? cm : c;
+        if(splitOnly||( 100 !=0 && Math.random() < 100/100)){
+            if(!topWin[`sm_tag_${tagId}`]){
+                topWin[`sm_tag_${tagId}`] = {
+                    float:0
+                }
+            }
+             let hostname = topWin.location.hostname
+                if (topWin.location.hostname.startsWith("www.")) {
+                    hostname = topWin.location.hostname.slice(4)
+                }
+
+            if(splitConfig.playerType !== "IN_ARTICLE"){
+                topWin[`sm_tag_${tagId}`].float += 1;
+                if(topWin[`sm_tag_${tagId}`].float > 1){
+                    (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=49&cb=${CacheBuster()}`;
+                    return;
+                }
+            }
+
+            (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=40&cb=${CacheBuster()}`;
+
+            // Create the container div
+var containerDiv = document.createElement("div");
+containerDiv.id = "container";
+containerDiv.style.width = "336px";
+containerDiv.style.height = "280px";
+containerDiv.style.position = "relative";
+
+// Create the gpt-backFill div
+var backFillDiv = document.createElement("div");
+backFillDiv.id = "gpt-backFill";
+backFillDiv.style.width = "336px";
+backFillDiv.style.height = "280px";
+backFillDiv.style.position = "absolute";
+backFillDiv.style.top = "0";
+backFillDiv.style.left = "0";
+backFillDiv.style.zIndex = "100";
+
+// Create the gpt-passback div
+var passbackDiv = document.createElement("div");
+passbackDiv.id = "gpt-passback";
+passbackDiv.style.width = "336px";
+passbackDiv.style.height = "280px";
+passbackDiv.style.position = "absolute";
+passbackDiv.style.top = "0";
+passbackDiv.style.left = "0";
+passbackDiv.style.zIndex = "1000";
+
+// Append the child divs to the container div
+containerDiv.appendChild(backFillDiv);
+containerDiv.appendChild(passbackDiv);
+
+// Append the container div to the document body or any desired parent element
+document.body.appendChild(containerDiv);
+function loadBackgroundImage(url, clickthroughUrl) {
+        var div = document.getElementById('gpt-passback');
+        div.style.backgroundImage = 'url(' + url + ')';
+        div.style.cursor = 'pointer';
+        div.addEventListener('click', function () {
+            window.open(clickthroughUrl, '_blank');
+        });
+    }
+    loadBackgroundImage('https://sm1.selectmedia.asia/cdn/files/6258a14d-aa01-4253-b4ed-eb3feddd6332', 'https://aliexpress.com');
+    // Load "HB" script
+    var HBScript = document.createElement('script');
+    HBScript.textContent = `!(function () { window.googletag = window.googletag || {}; window.vmpbjs = window.vmpbjs || {}; window.vpb = window.vpb || {}; vpb.cmd = vpb.cmd || []; vpb.st=Date.now();  vpb.fastLoad = true; googletag.cmd = googletag.cmd || []; vmpbjs.cmd = vmpbjs.cmd || []; var cmds = []; try{ cmds = googletag.cmd.slice(0); googletag.cmd.length = 0; }catch(e){} var ready = false; function exec(cb) { return cb.call(googletag); } var overriden = false; googletag.cmd.push(function () { overriden = true; googletag.cmd.unshift = function (cb) { if (ready) { return exec(cb); } cmds.unshift(cb); if (cb._startgpt) { ready = true; for (var k = 0; k < cmds.length; k++) { exec(cmds[k]); } } }; googletag.cmd.push = function (cb) { if (ready) { return exec(cb); } cmds.push(cb); }; }); if(!overriden){ googletag.cmd.push = function (cb) { cmds.push(cb); }; googletag.cmd.unshift = function (cb) { cmds.unshift(cb); if (cb._startgpt) { ready = true; if (googletag.apiReady) { cmds.forEach(function (cb) { googletag.cmd.push(cb); }); } else { googletag.cmd = cmds; } } }; } var dayMs = 36e5, cb = Math.floor(Date.now()*Math.random()), vpbSrc = '//player.hb.selectmedia.asia/prebidlink/' + cb + '/wrapper_hb_739646_17159.js', pbSrc = vpbSrc.replace('wrapper_hb', 'hb'), gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; s.defer=false; c.appendChild(s); s.onload = cb; s.onerror = function(){ var fn = function(){}; fn._startgpt = true; googletag.cmd.unshift(fn); }; return s; } loadScript(pbSrc); loadScript(gptSrc); loadScript(vpbSrc); })()`;
+    document.head.appendChild(HBScript);
+
+var scScript = document.createElement('script');
+        scScript.textContent = `vpb.cmd.push(()=>{
+vpb.setClientSchain({ asi: "selectmedia.asia", sid: "6087f5fb1df66861f07cdf47" });
+})`;
+document.head.appendChild(scScript);
+
+// Load "tag" script
+    const gptPassback = "gpt-passback"
+    const gptPassbackSlotName = '/84772874/apu_hb_336x280'
+    const gptBackFill = "gpt-backFill"
+    const gptBackFillSlotName = ''
+    var tagScript = document.createElement('script');
+    tagScript.src = '//securepubads.g.doubleclick.net/tag/js/gpt.js';
+    tagScript.async = true;
+    const ids = [gptBackFill, gptPassback]
+    const maxZIndex = (id, ids) => {
+        for (let i = 0; i < ids.length; i++) {
+            document.getElementById(ids[i]).style.zIndex = '1'
+        }
+        document.getElementById(id).style.zIndex = '999'
+    }
+    const gptPassBack = (slot) => {
+        setTimeout(() => {
+            if (slot) {
+                //googletag.destroySlots([slot])
+            }
+            maxZIndex(gptPassback, ids)
+        }, 1000 * 30);
+    }
+    const showHouseAs = () => {
+        maxZIndex(gptPassback, ids)
+    }
+    let maxRetry=2
+    tagScript.onload = function () {
+        googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function () {
+            const gptPassBackSlot=googletag.defineSlot(gptPassbackSlotName, [336, 280], gptPassback).addService(window.googletag.pubads());
+            const backFill = false//macro
+            googletag.pubads().addEventListener('slotRenderEnded', (event) => {
+                switch (event.slot.getAdUnitPath()) {
+                    case gptPassbackSlotName:
+                        if (!event.isEmpty) {
+                            maxZIndex(gptPassback, ids)
+                            return
+                        }
+                        if(maxRetry>0){
+                            maxRetry--
+                            googletag.pubads().refresh([gptPassBackSlot]);
+                            googletag.display(gptPassback);
+                            return
+                        }
+                        if (!backFill) {
+                            showHouseAs()
+                            return
+                        }
+                        googletag.defineSlot(gptBackFillSlotName, [[300, 250],[300, 600]], gptBackFill).addService(window.googletag.pubads());
+                        googletag.display(gptBackFill);
+                        maxZIndex(gptBackFill, ids)
+                        break
+                    case gptBackFillSlotName:
+                        if (!event.isEmpty) {
+                            gptPassBack(event.slot)
+                            return
+                        }
+                        showHouseAs()
+                        break
+                }
+            });
+            googletag.enableServices();
+            googletag.display(gptPassback);
+        });
+    };
+    document.head.appendChild(tagScript);
+
+            return
+        }
+    }catch(e){
+            reportError("split_error",null,e)
+            return
+    }
+
+
+
+    const isBelowViewPort = function (el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top >= 0;
+    }
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    const getPositionElementAndConf = async function (config, topDoc, isFallback) {
+
+             let selectedNode = null;
+             let posConf;
+             try{
+                if (config.length === 0) {
+                    topDoc = this.document
+                    topWin = w;
+                    config = scriptPosConfig
+
+                }
+                for (var i = 0; i < config.length; i++) {
+                try{
+                    posConf = config[i];
+                    let nodes = [];
+
+                    if (posConf.positionIdentifierType == "SELECTOR") {
+                        nodes = topDoc.querySelectorAll(posConf.position);
+                    }
+                    if (posConf.positionIdentifierType == "TAG") {
+                        nodes = topDoc.getElementsByTagName(posConf.position);
+                    }
+                    if (posConf.positionIdentifierType == "IFRAME") {
+
+
+                                    if(posConf.rationalPositioning=="IN"){
+                                          let bodyDiv
+                                          if(window.frameElement ){
+                                            bodyDiv=window.document .body
+                                          }else{
+                                              bodyDiv=window.frameElement.topFrame.contentDocument.body
+
+                                           };
+                                          nodes = [bodyDiv]
+
+
+                                    }else{
+                                        if (window.frameElement) {
+                                            let topFrame = window.frameElement;
+                                            let parentFrameWin = window.parent;
+                                            while (parentFrameWin.frameElement) {
+                                                topFrame = parentFrameWin;
+                                                parentFrameWin = parentFrameWin.parent;
+                                            }
+                                            nodes = [topFrame.parentElement.parentElement]
+                                        }
+                                    }
+                                }
+
+                    let usedCheckNodes = [...nodes];
+                    if (!isFallback) {
+                        usedCheckNodes = [...nodes].filter((node) => {
+                            return !(node.smSelector || node.av_setpos);
+                        })
+                    }
+                    if (isFallback && usedCheckNodes[0].smSelector) {
+                        selectedNode = 'used';
+                        break;
+                    }
+                    let viewPortCheckNodes = [...usedCheckNodes];
+
+                    if (posConf.positionCounter && viewPortCheckNodes.length > posConf.positionCounter) {
+                        selectedNode = viewPortCheckNodes[posConf.positionCounter];
+                        break
+                    }
+                    if (posConf.positionCounter === 0 && viewPortCheckNodes.length > 0) {
+                        selectedNode = viewPortCheckNodes[0];
+                        break
+                    }
+
+
+                }catch(err){
+                     reportError("posConf_catch", posConf,err);
+                }
+                }
+         }catch(err){
+            reportError("getPositionElementAndConf", false);
+         }
+    if (selectedNode) {
+                        if (selectedNode != 'used' && !ignoreDuplicateCall) {
+                            selectedNode.smSelector = 'used';
+                        }
+                        return {selectedNode, posConf}
+                    }
+        try{
+            if (retryCount > retryLimit) {
+                if (window.frameElement) {
+                 try{
+                     if(isFallback){
+                        topDoc = this.document
+                        topWin = w;
+                        reportError("fallback", scriptPosConfig);
+                        return await getPositionElementAndConf(scriptPosConfig, topDoc, true)
+                     }
+                    reportError("fallback_frameElement", iframePosConfig);
+                    return await getPositionElementAndConf(iframePosConfig, topDoc, true)
+                    }catch(err){
+                                topDoc = this.document
+                                topWin = w;
+                                reportError("fallback", scriptPosConfig);
+                                return await getPositionElementAndConf(scriptPosConfig, topDoc, true)
+                            }
+                } else {
+                    topDoc = this.document
+                    topWin = w;
+                     if(isFallback){
+                                            const err={
+                                            "error":true,
+                                            "version": "1_12_1185",
+                                            "context": "logic_loop_1_12_1185",
+                                                "scriptPosConfig":scriptPosConfig,
+                                                "isTopDoc":isTopDoc,
+                                            }
+
+                                            await reportLogError("fallback_else", err);
+                                            reportError("fallback_else", scriptPosConfig);
+                                            return
+                                        }
+                    return await getPositionElementAndConf(scriptPosConfig, topDoc, true)
+                }
+            }
+        }catch(err){
+            reportError("retry_limit", scriptPosConfig);
+        }
+
+        await sleep(50)
+        retryCount++
+        return await getPositionElementAndConf(config, topDoc, false)
+    }
+    const getNewUnitBoxDiv = function (doc, config, el) {
+
+
+        const divElem = doc.createElement('div');
+        const unitBoxId = "sm_box_" + Date.now();
+        divElem.id = unitBoxId;
+        divElem.style.width = "100%";
+        divElem.style.margin = "auto";
+        divElem.style.margin = "10px auto";
+        if (config.playerMaxWidth) {
+            divElem.style.maxWidth = `${config.playerMaxWidth}px`;
+        }
+        if (config.playerMinWidth) {
+            divElem.style.minWidth = `${config.playerMinWidth}px`;
+        }
+        divElem.style.position = "relative";
+        divElem.style.overflow = "hidden";
+        let elW = el.getBoundingClientRect().width ? el.getBoundingClientRect().width : el.parentNode.getBoundingClientRect().width
+        let calculatedHeight = "0px";
+        if (elW > config.playerMaxWidth || elW < config.playerMinWidth) {
+            elW = config.playerMaxWidth
+        }
+        if (!config.isExpandable) {
+            calculatedHeight = Math.ceil(elW * 9 / 16) + config.headerHeight + "px"
+        }
+        divElem.style.height = calculatedHeight;
+        return {unitBoxId, divElem};
+
+    }
+
+    const validSize = (w, h, headerHeight) => {
+        if (w > 256 && h > 256) {
+            if (h == Math.ceil(w * 9 / 16) + headerHeight) {
+                return true
+            }
+        }
+        if (w == 300 && h == 250) {
+            return true
+        }
+        if (w == 320 && h == 180) {
+            return true
+        }
+        return false
+    }
+
+    let mobileSizeTest=Math.random() >= 0.5
+    const newSizeCalculate = (parentWidth, parentHeight, maxWidth, minWidth, maxHeight, minHeight, headerHeight) => {
+
+        let width = parentWidth
+        let height = 0
+        let heightLimit = parentHeight
+        if (maxWidth == 0) {
+            maxWidth = parentWidth
+        }
+        if (parentWidth > maxWidth) {
+            width = maxWidth
+        }
+        if (!maxHeight) {
+            maxHeight = parentHeight
+        }
+        if (parentHeight && parentHeight > maxHeight - headerHeight) {
+            heightLimit = maxHeight - headerHeight
+        }
+        for (; width >= minWidth; width--) {
+            height = ((Math.ceil(width * 9 / 16))) + headerHeight
+            if (heightLimit && height > heightLimit || height < minHeight) {
+                continue
+            }
+            if(isMobile){
+                if( cm.newSize){
+                    return {width, height};
+                }
+            }
+
+            if (validSize(width, height, headerHeight)) {
+                return {width, height};
+            }
+        }
+
+         return  {width: 320, height: 180+ headerHeight}
+    }
+
+
+    const newSizeCalculateBoxDiv = function (doc, config, el) {
+            const divElem = doc.createElement('div');
+            const unitBoxId = "sm_box_" + Date.now();
+            divElem.id = unitBoxId;
+            divElem.style.margin = "auto";
+            divElem.style.margin = "10px auto";
+            divElem.style.position = "relative";
+            divElem.style.overflow = "hidden";
+            let elW = el.getBoundingClientRect().width ? el.getBoundingClientRect().width : el.parentNode.getBoundingClientRect().width
+            let elH = el.parentNode.getBoundingClientRect().height? el.parentNode.getBoundingClientRect().height : 0
+            if((elW==0&&elH==0) || (el.getBoundingClientRect().width==1&&el.getBoundingClientRect().height==1)  ){
+                           elW=config.playerMaxWidth
+            }
+            let headerHeight=0
+            if (config.advertisingLabelLocation==="OUT") {
+                headerHeight = config.headerHeight
+            }
+             if(elH<50){
+                elH=0
+             }
+            const s = newSizeCalculate(elW,elH,config.playerMaxWidth,config.playerMinWidth,config.playerMaxHeight,config.playerMinHeight,headerHeight)
+            if((s.width==300&&s.height==250)||(s.width==320&&s.height==180)){
+                initialConfig.advertisingLabelLocation="IN"
+            }
+
+            divElem.style.height = s.height+ "px";
+            divElem.style.width = s.width+ "px";
+            return {unitBoxId, divElem};
+    }
+
+    const addUnitContainerToPage = function (target, conf, el) {
+        if (conf.rationalPositioning === "BEFORE") {
+            target.parentNode.insertBefore(el, target);
+        }
+        if (conf.rationalPositioning === "AFTER") {
+            target.parentNode.insertBefore(el, target.nextElementSibling);
+        }
+        if (conf.rationalPositioning === "IN") {
+            target.appendChild(el);
+        }
+
+    }
+
+    const downloadScript = function (config, doc, win) {
+        const link = doc.createElement('link');
+        link.href = playerStyleUrl;
+        link.rel = 'stylesheet';
+        link.media = 'screen';
+        link.type = 'text/css';
+        doc.head.appendChild(link);
+        const scp = doc.createElement('script');
+        scp.id = "scp";
+        playersAb=[
+                "//serv-selectmedia.com/cdn/player/selectmedia-player.umd.js",
+                "//serv-selectmedia.com/cdn/player/test/selectmedia-player.umd.js",
+        ]
+        if (initialConfig.tagPlayerUrl){
+                playersAb=[ initialConfig.tagPlayerUrl ]
+        }
+        try{
+            if(testVersionOnly!=null && testVersionOnly.startsWith("test")){
+                     playersAb=["//serv-selectmedia.com/cdn/player/"+testVersionOnly+"/selectmedia-player.umd.js"]
+            }
+        }catch(err){
+        }
+        scp.src = playersAb[Math.round(Math.random())];
+        scp.type = "module";
+        scp.async = true;
+
+        scp.onload = function () {
+            startPlayer(config, win)
+
+        };
+        scp.onerror = function () {
+            //playerUrl = '//serv-selectmedia.com/cdn/player/selectmedia-player.umd.js'
+            if (scriptLoadErrorCounter++ < 3) {
+                downloadScript(config, doc, win)
+            } else if (scriptLoadErrorCounter < 10) {
+                setTimeout(function () {
+                    downloadScript(config, doc, win);
+                }.bind(this), 300);
+            } else {
+                   reportError("player_script_loading", false,{
+                                document_location: document.location,
+                                doc_location: doc.location,
+                                })
+            }
+        };
+        doc.getElementsByTagName('head')[0].appendChild(scp);
+    };
+    let startRetry = 0;
+    const startPlayer = function (config, win) {
+        if (!win.NewSMPlayer && startRetry++ < 4) {
+            setTimeout(() => {
+                startPlayer(config, win)
+            }, 100)
+        } else if (!win.NewSMPlayer && startRetry > 4) {
+            reportError("player_init_fail", false);
+            return
+        } else {
+            const myPlayer = new win.NewSMPlayer(config);
+            readyFunc(myPlayer,config,selectedPosObject,topDoc,topWin)
+
+        }
+
+
+    }
+
+    const calculateFloatingDimensions = function (config, el, win) {
+        let fw = config.floaterWidth
+        let fh;
+        let fHor;
+        let fVer;
+        if (config.floaterSize == "SCALE") {
+            fw = Math.ceil(win.innerWidth * config.floaterWidth / 100);
+            fh = Math.ceil(fw * 9 / 16);
+        } else {
+            fh = config.floaterHeight ? config.floaterHeight : Math.ceil(fw * 9 / 16);
+        }
+        const fPos = config.positioning.split("_");
+        if (fPos.length === 1) {
+            fPos.push("MIDDLE");
+        }
+        fVer = fPos[0].toLowerCase()
+        fHor = fPos[1].toLowerCase()
+        return {
+            floatingWidth: fw,
+            floatingHeight: fh,
+            floatingHorizontal: fHor,
+            floatingVertical: fVer,
+            floatingDetachLimit: true,
+            floatingVerticalOffset: config.heightMargin ? config.heightMargin : 0,
+            floatingHorizontalOffset: config.widthMargin ? config.widthMargin : 0,
+            isDetachToFloating: true,
+            isDetachToFloatingOnStart: true,
+        }
+
+    }
+      const calculateStickyDimensions = function (config, el, win) {
+                 let fw = config.playerMaxWidth
+                 let fh;
+
+                 if (config.playerSize == "RESPONSIVE") {
+                     fw = Math.ceil(config.playerMaxWidth );
+                     fh = Math.ceil(fw * 9 / 16);
+                 }
+                 if(config.playerSize == "SCALE" ) {
+                       fw = Math.ceil(win.innerWidth * config.scaleWidth / 100);
+                       fh = Math.ceil(fw * 9 / 16);
+                 }
+                 if(config.playerSize == "FIXED"){
+                     fw=config.width
+                     fh=config.height
+                 }
+                 const fPos = config.positioning.split("_");
+                 if (fPos.length === 1) {
+                     fPos.push("MIDDLE");
+                 }
+                 let fVer = fPos[0].toLowerCase()
+                 let fHor = fPos[1].toLowerCase()
+                 return {
+                     floatingWidth: fw,
+                     floatingHeight: fh,
+                     floatingHorizontal: fHor,
+                     floatingVertical: fVer,
+                     floatingDetachLimit: true,
+                     floatingVerticalOffset: config.heightMargin ? config.heightMargin : 0,
+                     floatingHorizontalOffset: config.widthMargin ? config.widthMargin : 0,
+                     isDetachToFloating: true,
+                     isDetachToFloatingOnStart: true,
+                 }
+
+      }
+       const fixBoxDiv = function (doc, config, el) {
+
+
+            const divElem = doc.createElement('div');
+            const unitBoxId = "sm_box_" + Date.now();
+            divElem.id = unitBoxId;
+            divElem.style.margin = "auto";
+            divElem.style.margin = "10px auto";
+            divElem.style.position = "relative";
+            divElem.style.overflow = "hidden";
+
+            divElem.style.width = `${config.width}px`;
+            let height=config.height
+                if (config.advertisingLabelLocation==="OUT") {
+                    height = height + config.headerHeight
+                }
+            divElem.style.height = `${height}px`;
+            return {unitBoxId, divElem};
+
+
+        }
+    const getPlayerConfig = function (config, win, el,posConf) {
+
+        let playerConfig = {
+            publisherId,
+            channelId,
+            tagId,
+            selector: "#" + el.unitBoxId,
+            url,
+            domain,
+            isExpandable: config.isExpandable,
+            advertisementText: config.advertisingLabel,
+            zIndexCustom: config.zIndexMax ? 99999 : config.zIndex,
+            playerCloseButtonPositioning: config.playerCloseButtonPositioning,
+            passBackWidth: config.passBackWidth,
+            passBackHeight: config.passBackHeight,
+            preloaderWidth: config.preloaderWidth,
+            preloaderHeight: config.preloaderHeight,
+            customCSS: config.customCSS ? config.customCSS : "",
+            baseTrackUrl: "//track-selectmedia.com/trackv4/?",
+            waterfallServer: "//serv-selectmedia.com/serving_v3/",
+            autoPlay: config.autoplay,
+            isDebug: false,
+            templateId: config.id,
+            isSticky: config.playerType === "STICKY" ? true : false,
+            isFloating: config.playerType === "FLOATING" ? true : false,
+            vastLoadTimeout: config.vastLoadTimeout || 2000,
+            consent: "",
+            gdpr: false,
+            isHasCloseButton: config.closeButton,
+            isHasPlayAdsButton: config.isHasPlayAdsButton,
+            unitRatioParams: [16, 9],
+            openingAnimationTime: config.openingAnimationTime || 300,
+            prebidScriptUrl: "//serv-selectmedia.com/cdn/player/prebid/prebid.js",
+            pauseOnUnseen: config.pauseOnUnseen,
+            prebidTimeOut: config.prebidTimeOut || 6000,
+            unlimitedWaterfallRuns: config.unlimitedWaterfallRuns,
+            errorLimit: config.errorLimit || 33,
+            timeBetweenWaterfalls: config.timeBetweenWaterfalls || 1000,
+            schain: schain,
+            ignoreErrorLog: config.ignoreErrorLog || false,
+            autoPlayAfterTimePassSec: config.autoPlayAfterTimePassSec || 20,
+            enableAutoPlayAfterTimePass: config.enableAutoPlayAfterTimePass || false,
+            backGroundPreBidDuplicateLoad: config.backGroundPreBidDuplicateLoad || 1,
+            preBidDuplicateLoad: config.preBidDuplicateLoad || 5,
+            requestUntilBidReady: config.requestUntilBidReady || 1,
+            isDesktop: !isMobile,
+            waterfallRuns: config.waterfallRuns,
+            waterfallErrorLimitEnabled: config.waterfallErrorLimitEnabled,
+            enablePreloader: config.preloader,
+            enablePassBack: config.passBack,
+            headerHeight: config.headerHeight,
+            playerSize:config.PlayerSize,
+            width: config.width,
+            height: config.height,
+            advertisementLocation:config.advertisingLabelLocation,
+            posConf:posConf,
+            iframeWorkers:config.iframeWorkers,
+            viewAbilityTimeout:config.viewAbilityTimeout,
+            enableViewAbilityTimeout:config.enableViewAbilityTimeout,
+            preloaderBeforeWaitInMil:config.preloaderBeforeWaitInMil,
+            passBeforeWaitInMil:config.passBeforeWaitInMil,
+            preloaderUrl:config.preloaderUrl,
+            passBackUrl:config.passBackUrl,
+            floatOnlyOnBottom:config.floatOnlyOnBottom,
+            positioning:config.positioning,
+            floaterSize:config.floaterSize,
+            floaterMaxWidth:config.floaterMaxWidth,
+            floaterMaxHeight:config.floaterMaxHeight,
+            prebidWorkerLimit: config.prebidWorkerLimit || -1,
+            amazonWorkerLimit: config.amazonWorkerLimit || -1,
+            googleWorkerLimit: config.googleWorkerLimit || -1,
+            defaultDomain: config.defaultDomain || "",
+            allEventsGet: config.allEventsGet || false,
+            allEventsNotGetDoubleCheck: config.allEventsNotGetDoubleCheck || false,
+            playerType: config.playerType || "",
+            hideAli:config.hideAli || false,
+            autoHideDisplay:config.autoHideDisplay || false,
+            enableTimeWaitBetweenGoogle:config.enableTimeWaitBetweenGoogle || false,
+            timeWaitBetweenGoogleInSec:config.timeWaitBetweenGoogleInSec || 4,
+            drainGoogleAds:config.drainGoogleAds || false,
+            enableGoogleInSticky:config.enableGoogleInSticky || false,
+            isAmazonSizeRange:config.isAmazonSizeRange || false,
+            googleAutoPlay:config.googleAutoPlay || false,
+            notGoogleAutoPlay:config.notGoogleAutoPlay || false,
+            googleWorkers:config.googleWorkers || 4,
+            displayOnly:config.displayOnly || false,
+            enableTimeBetweenGoogle:config.enableTimeBetweenGoogle || false,
+            timeBetweenGoogle:config.timeBetweenGoogle || 0,
+            enableAdSourcesABCpm:config.enableAdSourcesABCpm || false,
+            houseAdImageSrc:config.houseAdImageSrc || "",
+            houseAdClick:config.houseAdClick || "",
+            ignoreGFPR:config.ignoreGFPR || false,
+            newSize:config.newSize || false,
+            enableIas:config.enableIas || false,
+            inventoryIgnore:config.inventoryIgnore||false,
+            flowType:config.flowType|| "",
+        }
+
+        if (config.playerType === "FLOATING") {
+            const dimensionsSettings = calculateFloatingDimensions(config, el, win);
+            Object.assign(playerConfig, dimensionsSettings)
+        }
+        if (config.playerType === "STICKY") {
+            const dimensionsSettings = calculateStickyDimensions(config, el, win);
+            Object.assign(playerConfig, dimensionsSettings)
+        }
+        return playerConfig;
+    }
+
+    const readyFunc =async  function (myPlayer,config,selectedPosObject,topDoc,topWin) {
+        try{
+            if(window.smampdata&& window.smampdata.amptag==true && window.context && window.context.renderStart){
+                    window.context.renderStart();
+            }
+            myPlayer.eventDispatcher.addEventListener("heavy_ad",retry)
+
+
+            
+            }catch(err){
+                reportError("readyFunc", false)
+           }
+    }
+    const runUnit = async function () {
+        try {
+            (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=0&cb=${CacheBuster()}`;
+            if (!topWin[`sm_tag_${tagId}`]) {
+                topWin[`sm_tag_${tagId}`] = {
+                    float: 0
+                }
+            }
+            const configX = isMobile ? cm : c;
+
+            if (initialConfig.playerType !== "IN_ARTICLE" && !ignoreDuplicateCall) {
+                topWin[`sm_tag_${tagId}`].float += 1;
+                if (topWin[`sm_tag_${tagId}`].float > 1) {
+                   (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=48&cb=${CacheBuster()}`;
+                    return;
+                }
+            }
+            const posObject = await getPositionElementAndConf(posConfig, topDoc, false);
+            selectedPosObject=posObject
+            if(posObject.selectedNode=== 'used' && !ignoreDuplicateCall){
+                (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=48&cb=${CacheBuster()}`;
+                return
+            }
+            let smBox=null
+            if(initialConfig.playerSize===PlayerSizeType.FIX){
+              smBox = fixBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+            }else{
+               if(newSize){
+                    smBox =newSizeCalculateBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                }else{
+                    smBox = getNewUnitBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+               }
+            }
+            addUnitContainerToPage(posObject.selectedNode, posObject.posConf, smBox.divElem);
+            const playerConfig = getPlayerConfig(initialConfig, topWin, smBox,posObject.posConf);
+            downloadScript(playerConfig, topDoc, topWin);
+
+              if( topWin.smInit>0){
+                reportError("multi_player", false,topWin.smInit)
+                topWin.smInit=topWin.smInit+1
+                return
+              }
+              topWin.smInit=1
+        } catch (e) {
+            (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=50&cb=${CacheBuster()}`;
+            reportError("Run_Function", false,e)
+        }
+
+    }
+     const retry = async function () {
+                try {
+                    reportError("heavy_ad", false);
+
+                    posObject=selectedPosObject
+
+                    let smBox=null
+                    if(initialConfig.playerSize===PlayerSizeType.FIX){
+                      smBox = fixBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                    }else{
+                       if(newSize){
+                            smBox =newSizeCalculateBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                        }else{
+                            smBox = getNewUnitBoxDiv(topDoc, initialConfig, posObject.selectedNode)
+                       }
+                    }
+                    addUnitContainerToPage(posObject.selectedNode, posObject.posConf, smBox.divElem);
+                     const playerConfig = getPlayerConfig(initialConfig, topWin, smBox,posObject.posConf);
+                     playerConfig["inventoryIgnore"]=true
+                     startPlayer(playerConfig, topWin)
+                } catch (e) {
+                    debugger
+                    (new Image).src = `${baseTrackUrl}&d5=${hostname}&d3=${publisherId}&d25=${currentTemplateID}&d23=${tagId}&d24=${channelId}&d2=${Math.floor(Date.now() / 1000)}&e=50&cb=${CacheBuster()}`;
+                    reportError("Run_Function", false,e)
+                }
+
+            }
+    runUnit();
+
+})(window)
+
+”ò¿ŸŒ  ˇ       
+õÎ
+      extraError     Ës?	      splitOnly      A£∞Z      noSplitOnly    mAnè      smDebug    5ß≠Ü      testVersionOnly    
+G	7      urlSearchParams    ¥≠y^      URLSearchParams    $√Á      top    ¯2áâ      window	     0+QA      location
+   ã&,      sm_split   3ünÁ      sm_no_split    ´      sm_debug   Ìƒ0¯      sm_test_version    ºoò      err    )uöy      filterDomainsEnable    Ò»œ      included   ª“~¯      filterDomainsIncluded      ·(c      domainToFilter     ª©`X      href   Äıo      schain     ø¶:      615ad8f9fc48ab40845ac82d   ıæ
+      newSizeM   í≠Àz      newSizeD   r.ªw      extraDes   5√'      extraMob   ¥ôw      PlayerSizeType     ·˚ál      FIX    z¨d¯      FIXED      ®k34
+      RESPONSIVE     è∞™í      SCALE      ¥3©$      84e6a241-2295-4758-8416-e2c0163717a0    ÆΩ q      templateType!   Ãl4	      OUTSTREAM"      Œïî
+      playerType#     dmxï
+      IN_ARTICLE$     6¡=ä      unlimitedWaterfallRuns%     YÉÑ      waterfallRuns&      TÄ¢Ÿ      midrollDelay'   I†y€      autoplay(   %ïZß      clickToPlay)    8Û˝¥      pauseOnUnseen*       ÷ÿ¡      closeButton+    öÛªã      advertisingLabel,   {öF¡      Advertisement-      ÓqÈÕ      playerMaxWidth.     ›ã‡      playerMinWidth/     ∑‘ıŸ      playerMaxHeight0    º8Ò      openingAnimation1   ˘htú	      zIndexMax2      f˜      zIndex3     Ö@_Ì	      customCSS4      ØëÄ      heightMargin5   Y_s      widthMargin6    —h∫'      positioning7    VÈfo      BOTTOM_RIGHT8   éOˆ†      floaterSize9    /JËª      floaterWidth:   ßø{      floaterHeight;      Åˆ\      floaterMaxWidth<    ‘˛ÕM      floaterMaxHeight=   ·ö_÷      playerCloseButtonPositioning>   Y<W	      RIGHT?      ‹U¸Ô      passBack@   "¡π      passBackUrlA    ÓV=Ïk      https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65871aa85a2a7f02c035/vidsplay_auto_pass_post.txtB    —vΩ      passBackWidthC      VÓ°?      passBackHeightD     ﬁ]»&	      preloaderE      ´åŸw      preloaderUrlF   Û(j      https://play.selectmedia.asia/58fcbed1073ef420086c9d08/61ee65872a8cca2e222014bb/vidsplay_auto_pass_pre.txtG     `…
+À      preloaderWidthH     ÔNπ(      preloaderHeightI    ÇΩå	      playerUrlJ      ©°_nA      https://serv-selectmedia.com/cdn/player/selectmedia-player.umd.jsK      #t˜O
+      errorLimitL     ~ÙÌ¿      timeBetweenWaterfallsM      XA      autoPlayAfterTimePassSecN   Übz      enableAutoPlayAfterTimePassO    Ôm ÿ      backGroundPreBidDuplicateLoadP      dHmÓ      preBidDuplicateLoadQ    JÓÆ%      requestUntilBidReadyR   åÄQ«      vastLoadTimeoutS    äS Ø      prebidTimeOutT      x:Æ™      waterfallErrorLimitEnabledU     É9ß\
+      playerSizeV     ÎƒJ˚      widthW      ∑…≈      heightX     ¢VºΩ      advertisingLabelLocationY   ìLÃœ      OUTZ    EÚQË      scaleWidthPercentage[   ¥Ÿ¢î      iframeWorkers\      ÿÄ”I      enableViewAbilityTimeout]   PË÷‡      viewAbilityTimeout^     Ï©kù      enableMultiLoadLock_    ª˜ˇ      preloaderBeforeWaitInMil`   FNıπ      passBeforeWaitInMila    “q§≈      floatOnlyOnBottomb      /ú´      autoHideDisplayc    [U[      enableTimeWaitBetweenGoogled    ıò¥R      timeWaitBetweenGoogleInSece     g—€      googleWorkersf      }¡ÊÌ      enableAdSourcesABCpmg   p? Ç      isExpandableh   …⁄É      propertyi   QHﬁ$      13040bed-d283-4fd9-abec-62d240273393j   wÀ¸      selectedPosObjectk      …≤O5	      smampdatal      1ˆ¸ˆ      amptagm     ªWo¥      positionIdentifierTypen     ∂ƒµ      SELECTORo   vÕÜ      orderp      »Åí      positionq   õ¯∏j)      #tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9r      m#ëß      rationalPositionings    'cß      positionCountert    ”t2      playerStyleUrlu     ë°ó1      https://serv-selectmedia.com/cdn/player/style.cssv      W:>ª	      playerKeyw      ˚π¶É      tagIdx      à¿V(      tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9y   ù∫{      trafficGroupIdz     ∫3$      508b306a-e4d8-4a71-8029-3a1da0a810e7{   ]ˇ      publisherId|    ∑ =i$      1f7d4e52-3235-4d3c-8030-fcb7f6af74c4}   ˛J#g
+      retryLimit~     ∆…ë—      scriptID   ºû>®	      channelIdÄ      ‡5Û 
+      retryCountÅ     AÏuZ      scriptLoadErrorCounterÇ     S7w      baseTrackUrlÉ   qÕË…!      //track-selectmedia.com/trackv4/?Ñ      ‹QﬂÁ      scriptPosConfigÖ    i£ä      AFTERÜ      jÓ÷Å      iframePosConfigá    .’       IFRAMEà     s[/Ô      isTopDocâ   r°zí      topWinä     Ô.å      topDocã     ∏OÄ      documentå   î(~      hostnameç   ›JX?
+      startsWithé     is"«      www.è   ÿÖ Ã      sliceê      ∞ôw√      domainë     .l–®      currentTemplateIDí      Eyç.      headerHeightì   ’(Mı      reportError¶    DC      createElementß      ú∑»õ      src®    /æı      reportLogError∑     òh;      bodyπ   ëvC      isMobile∫   π„+	      navigatorª      ìãà	      userAgentº      ›¬∫      vendorΩ     t9,¨      operaæ      6ôfÿ      substrø     €xŒ1      newSize¿    Ü:WÇ      initialConfig¡      0      ignoreDuplicateCall¬    €µ5≈	      posConfig√      Ü}ÿ„      sortƒ   ¬∞‹       CacheBuster≈    *π      now∆    <ˇÜ       Required«   *g¿      splitConfig»    '∂Ä≈      random…     Jâ      sm_tag_     [œ      floatÀ      û“      ImageÃ      9;‘ö      &d5=Õ   £æ      &d3=Œ   !Ø~      &d25=œ      ©Ê–ò      &d23=–      ≠A7«      &d24=—      úù%ï      &d2=“   `-Ñó      floor”      l£Ô¬	      &e=49&cb=‘      ∫ÔG:	      &e=40&cb=’      ∏V⁄q      containerDiv÷   ú≥ÊŸ      div◊    -‚
+Ë	      containerÿ      }!Lº      336pxŸ      ÎÕ©%      280px⁄      Ï-k      relative€   Ø€      backFillDiv‹    ªAm∞      gpt-backFill›   H<*ê      absoluteﬁ   ı]á      leftﬂ   Oäï      passbackDiv‡    ÓB      gpt-passback·   VÏmp      1000‚   ≠$~      appendChild„    `˜¶-      loadBackgroundImage‰    Z„˛      clickthroughUrlÂ    t«£      getElementByIdÊ     '°‹      backgroundImageÁ    &4Ã¡      url(Ë   ˇ∆N      cursorÈ     ˘Èÿ9      pointerÍ     rO      addEventListenerÎ   ü™‚X      clickÓ      ™ô≠∫K      https://sm1.selectmedia.asia/cdn/files/6258a14d-aa01-4253-b4ed-eb3feddd6332Ô    cË˘      https://aliexpress.com     †©Æé      HBScriptÒ   b»≈e      textContentÚ    û»*ºê     !(function () { window.googletag = window.googletag || {}; window.vmpbjs = window.vmpbjs || {}; window.vpb = window.vpb || {}; vpb.cmd = vpb.cmd || []; vpb.st=Date.now();  vpb.fastLoad = true; googletag.cmd = googletag.cmd || []; vmpbjs.cmd = vmpbjs.cmd || []; var cmds = []; try{ cmds = googletag.cmd.slice(0); googletag.cmd.length = 0; }catch(e){} var ready = false; function exec(cb) { return cb.call(googletag); } var overriden = false; googletag.cmd.push(function () { overriden = true; googletag.cmd.unshift = function (cb) { if (ready) { return exec(cb); } cmds.unshift(cb); if (cb._startgpt) { ready = true; for (var k = 0; k < cmds.length; k++) { exec(cmds[k]); } } }; googletag.cmd.push = function (cb) { if (ready) { return exec(cb); } cmds.push(cb); }; }); if(!overriden){ googletag.cmd.push = function (cb) { cmds.push(cb); }; googletag.cmd.unshift = function (cb) { cmds.unshift(cb); if (cb._startgpt) { ready = true; if (googletag.apiReady) { cmds.forEach(function (cb) { googletag.cmd.push(cb); }); } else { googletag.cmd = cmds; } } }; } var dayMs = 36e5, cb = Math.floor(Date.now()*Math.random()), vpbSrc = '//player.hb.selectmedia.asia/prebidlink/' + cb + '/wrapper_hb_739646_17159.js', pbSrc = vpbSrc.replace('wrapper_hb', 'hb'), gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; s.defer=false; c.appendChild(s); s.onload = cb; s.onerror = function(){ var fn = function(){}; fn._startgpt = true; googletag.cmd.unshift(fn); }; return s; } loadScript(pbSrc); loadScript(gptSrc); loadScript(vpbSrc); })()Û   ∑7Ma      headÙ   3y≤      scScriptı   ¿æ"ùh      vpb.cmd.push(()=>{
+vpb.setClientSchain({ asi: "selectmedia.asia", sid: "6087f5fb1df66861f07cdf47" });
+})ˆ   ¶º0§      gptPassback˜    b”w      gptPassbackSlotName¯    úh:Y      /84772874/apu_hb_336x280˘   N∑
+      gptBackFill˙    'Øÿù      gptBackFillSlotName˚    ∏±ˆ%	      tagScript¸      öÀE.      //securepubads.g.doubleclick.net/tag/js/gpt.js˝     ·—∫      ids˛    HPn_	      maxZIndex      ˇô6—      gptPassBack   ©<◊      slot  ë9¡      showHouseAs   °|·      maxRetry  áƒ{p      onload	    ”¿T      gptPassBackSlot   |™¬¡      backFill  ÷æA…      split_error   °'tR      isBelowViewPort   Ã^˘ö      sleep     Ì‹G…      getPositionElementAndConf     ~û4      config9    ım      getNewUnitBoxDiv:  ?U3      docK   2^Y	      validSizeL     w6T¯      mobileSizeTestM    ÛN¸      newSizeCalculateS  ﬁËv      newSizeCalculateBoxDivV    5C°       addUnitContainerToPage[    	€ÿ›      downloadScript\    UrÊ¡      wink   v<4"      startPlayerq   !‰Æ™
+      startRetryu    	BÎ	      readyFuncv     |„aÔ      calculateFloatingDimensionsÜ   Ó±       calculateStickyDimensionsà     W≤-	      fixBoxDivâ     r¥Õø      getPlayerConfigæ   Ì£      retryø     ÜY˙˘      runUnit…   t§€˙	      isMobile<      øÀ(”      tagScript.onloadÀ  ìÒı‹R     (android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silkÃ    9‹ÆF     1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-Õ    SSó%      loadBackgroundImage/<    '        '          
+   Ô%,â                                           2                                                                                                                                                                                                                                                                                                                                            ≥Oåc            	            w `’  Ù  ﬂ  €  i  ˚  „    A             Pj  På  P  ë  P  â  PÅ  P`    ¬  PV    Pà  Pq PÄ  PL   P  c `  p  ä  P9 P[ P  Pw  PK Pu P®  P¿  Pt  P  P Py  à PM PÜ  Pì  P~  â Pv  ê  Pk P{  PÜ Pø  PS P  PI  ƒ  Pv P⁄ `}  P  Ñ  Pæ Pπ  PÇ  P¡  PV Pø                     e                                     i                       h            h            h            h           e            p            «           å  „   Pˆ  P˜  P˘  P˙  P˝  P˛  P  P P         e                            ä              a  b                              ⁄  ‰  P÷  Ø¬0∞À    Ã    IÙ$KEÆ˙ö                             ?   ;  ç    "  $  %  &  '  (  )  *  +  -  .  /  0  1  2  3  4  5  6  8  9  :  ;  <  =  ?  @  B  C  D  E  G  H  I  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Z  [  \  ]  ^  _  `  a  b  c  d  e  f  ?   ;  ç    "  $  %  &  '  (  )  *  +  -  .  /  0  1  2  3  4  5  6  8  9  :  ;  <  =  ?  @  B  C  D  E  G  H  I  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Z  [  \  ]  ^  _  `  a  b  c  d  e  f        m  o  p  r  s          m  o  p  r  s          m  o  p  r  s          m  o  p  r  s             á&’™é!´!      <      <                            ∂  G   ∂ G   &úü 
+`Pë     ¨   ¨   e                        µ   ÿG   €   o ƒ   ÷∑   G      ∂  %   %I   ÷∑   G      I	   ÷∑   ÿG
+   €   h   s ÷ü0 `Pë 	P8 `Pû0 `Pî0 `Pï PD P      ,  ¸   †                        ´¨   ÷µ   G   ó*   ë   ÷µ   G   ó   ë   ÷µ   G   ë   ¨   ÷g   ÿG   €∑   o ó+   ë   ÷g	   ÿG   €∑   ÿG
+   €o o ë   î   ë   û…üë   û…ü…ü 6 `Pæ0 `Pê Ä VP® Ä ^P#ˇˇˇ¯Pí0 `PA H `P1 T  ,         ü   ˇˇˇˇ    î              ù             8  ∏  ï         #       ˘     $«   ´¨  ¨	  ¨
+  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ¨  ÷Æ 
+  ÷¨
+  ÷¨  ÷¨  ÷Æ   ÷§´¨  ÷ ¨  ÷§µ   |µ   G   G   G   ⁄  } ƒ  ÷ì:   ë    û¶´¨  ÷¨  ÷µ   |µ   G   G   ⁄  } ƒ  ÷…ë   ∑  ÿG	   €
+   o    ƒ
+  ÷∑  ÿG	   €   o    ƒ  ÷∑  ÿG	   €   o    ƒ  ÷∑  ÿG	   €   o ≈   ÷∑
+  ó   ë   ÷∑  ó   ë   ÷∑  ë   î   ë   „ë   …ì   ë    û¶´¨  ÷¨  ÷…ë   ¨  ÷∑  î$  ë   §´¨  ¨  ¨  ÷¨  ÷¨  ÷c    ¨  ÷´¨  ÷¨  ÷í   ∑  ∑  G   îX   ë   µ   G   G   ÿG   €∑  ∑  Ho î   ë%   ƒ  ÷ì   ë%   ∑  .ÿ'ƒ  ÷÷ìôˇˇˇë'   …∑  ñ   ë)   ÷∑  ë*   î   ë+    û…»üë+   ∑  ñ   ë-   ÷∑  ë-   î   ë.    û…»üë.   …ì   ë.    û¶´¨  ÷¨  ÷…ë.      Æ   ÷¨	  ÷¨  ÷6   ¨  ÷6   ¨  ÷6      9      9      9   Æ '  ÷6      9    !   9"   #   9$   9%   
+9&   9'   9(   9)   9*   9+   ,   9-   Ä9.   ˙ 9/   90   91   92   93   4   95   96   97   8   99      9:   9;   9<   9=   9>   ?   9@   9A   B   9C   ,9D   ˙ 9E   9F   G   9H   ,9I   ˙ 9J   K   9L   ¬9M   Ë9N   
+9O   9P   9Q   9R   9S   –9T   p9U   9V      9W   ,9X   ˙ 9Y   Z   9[   9\   9]   9^   9_   9`   9a   9b   9c   9d   9e   9f   9g   9h   Æ   ÷∏   ∏   G1   Ii   ÷∏   Ii   ÷∑  îR   ëy   ´¨  ÷∑  [íz   \]ï.   ë{   ´¨  ÷¨  ∏   ∑  ∑  ∑  HK÷÷ìœˇˇˇë}   ^…ë}   6k   l   9    !   9"   #   9$   9%   
+9&   9'   9(   9)   9*   9+   ,   9-   Ä9.   ˙ 9/   90   91   92   93   4   95   96   97   8   99      9:   9;   9<   9=   9>   ?   9@   9A   B   9C   ,9D   ˙ 9E   9F   G   9H   ,9I   ˙ 9J   K   9L   ¬9M   Ë9N   
+9O   9P   9Q   9R   9S   –9T   p9U   9V      9W   ,9X   ˙ 9Y   Z   9[   9\   9]   9^   9_   9`   9a   9b   9c   9d   9e   9f   9g   9h   Æ   ÷∏   ∏   G1   Ii   ÷∏   Ii   ÷Æ   ÷∑	  îR   ë¬   ´¨  ÷∑  [í√   \]ï.   ëƒ   ´¨  ÷¨  ∏   ∑  ∑  ∑  HK÷÷ìœˇˇˇë∆   ^…ë∆   µ   Gn   ñ   ë…   ÷µ   Gn   Go   ëÕ   î≤   ëŒ   ´¨  ÷µ   Gn   [í—   \]ï4   ë“   ´¨  ÷¨  ∏   ∑  µ   Gn   ∑  HK÷÷ì…ˇˇˇë÷   ^…´¨  ÷µ   Gn   [íŸ   \]ï4   ë⁄   ´¨  ÷¨  ∏   ∑  µ   Gn   ∑  HK÷÷ì…ˇˇˇëﬁ   ^…ëﬁ   c    ¨  ÷∑  î   ë·   c    ƒ  ÷ë‚   c    ¨  ÷∑  î   ëÂ   c    ƒ  ÷ëÊ   µ   Gn   ñ   ëÈ   ÷µ   Gn   Go   ëÌ   îÜ   ëÓ   c   6r   s   9t   9u   v   9w   x   9y   9z   d    ƒ  ÷c   6{   s   9t   9u   v   9w   x   9y   9z   d    ƒ  ÷ë¸   K   ¨  ÷|   Æ   ÷}   ¨  ÷~   Æ   ÷   ¨  ÷Ä   Æ #  ÷Æ +  ÷∏   ¨  ÷   Æ   ÷Æ   ÷Æ   ÷Å   Æ /  ÷c   6Ç   s   9t   9u   É   ∑  /%9w   Ñ   9y   9z   d    Æ ,  ÷c   6Ö   Ü   9t   9u   4   9w   Ñ   9y   9z   d    Æ   ÷Æ   ÷ Æ   ÷ Æ   ÷§µ   G   ≈   ÷µ   Gá   ≈   ÷≈   ÷ì/   ë   û¶´¨  ÷¨  ÷µ   ≈   ÷µá   ≈   ÷…ë  µ   Gn   ñ   ë  ÷µ   Gn   Go   ë  î    ë  µ   ≈   ÷µá   ≈   ÷ë  ∏   G   Gâ   Æ   ÷∏   G   Gâ   ÿGä   €ã   o î+   ë"  ∏   G   Gâ   ÿGå   €o ≈   ÷ë&  ∏   G   G   Æ *  ÷∏   G   Gâ   Æ !  ÷4   Æ   ÷∏   ∏   Gç   î   ë,  ∏   Gç   ì   ë-  ë-  Iç   ÷∏   ∏   Gç   î   ë0  ∏   Gç   ì   ë1  ë1  Iç   ÷2ié   Æ   ÷2iè   Æ   ÷hê    o  Æ .  ÷∏ .  î   ë4  ∑	  ì   ë4  ∑  ë4  Æ %  ÷∏ .  î   ë5  ∏   ì   ë5  ∏   ë5  Æ   ÷∏   G    ≈   ÷∏   Gë   Æ 0  ÷∏ .  î   ë8  ∑  ì   ë8  ∑  ë8  Æ 	  ÷ƒ  ÷í8  ∑  ∏ 	  G   îã   ë;  ´¨  ÷∏ 	  ∑  H¨  ÷∑  Gt   Ü   ñ   ë?  ÷∑  Gy   x   ëA  î&   ëB  µ   ≈   ÷µá   ≈   ÷…ì   ëD  …∑  .ÿ'ƒ  ÷÷ìeˇˇˇëF  ∏ 	  ÿGì   €2iî   s ÷hï   Æ (  ÷§´¨  ÷∑  î   ëI  µó   |ò   ⁄  } °ëK  ∏ .  î   ëL  ∏   ì   ëL  ∏   ëL  ¨  ÷∑
+  ó+   ëM  ÷dñ   ëO  ÷µô   ÿGö   €o  ëS  î¨  ëT  «õ   ´¨  ¨  ÷hú   ¨  ÷∏  ù   ∏  /%Hï(   ëW  ∏  ù   ∏  /%6û   9ü   K÷ë[  ∏  G   Gâ   ¨  ÷∏  G   Gâ   ÿGä   €ã   o î*   ëb  ∏  G   Gâ   ÿGå   €o ƒ  ÷ëf  ∑  G$   #   îÁ   ëi  ∏  ù   ∏  /%HÿGü   %Iü   ÷∏  ù   ∏  /%HGü   î§   ës  µ†   |⁄  }  ∏/  /°   %∑  /%¢   %∏#  /%£   %∏  /%§   %∏  /%•   %∏  /%¶   %µô   ÿGß   €µ®   ÿG©   €o  Ë*o /%™   %∏(   o  /%I´   ÷ û»…»üëå  µ†   |⁄  }  ∏/  /°   %∑  /%¢   %∏#  /%£   %∏  /%§   %∏  /%•   %∏  /%¶   %µô   ÿGß   €µ®   ÿG©   €o  Ë*o /%¨   %∏(   o  /%I´   ÷µá   ÿG≠   €Æ   o ƒ   ÷∑   Ø   I    ÷∑   G∞   ±   IX   ÷∑   G∞   ≤   IY   ÷∑   G∞   ≥   Iw   ÷µá   ÿG≠   €Æ   o ƒ  ÷∑  ¥   I    ÷∑  G∞   ±   IX   ÷∑  G∞   ≤   IY   ÷∑  G∞   µ   Iw   ÷∑  G∞   ∂   I   ÷∑  G∞   ∂   I∑   ÷∑  G∞   ∏   I3   ÷µá   ÿG≠   €Æ   o ƒ  ÷∑  π   I    ÷∑  G∞   ±   IX   ÷∑  G∞   ≤   IY   ÷∑  G∞   µ   Iw   ÷∑  G∞   ∂   I   ÷∑  G∞   ∂   I∑   ÷∑  G∞   ∫   I3   ÷∑   ÿGª   €∑  s ÷∑   ÿGª   €∑  s ÷µá   Gº   ÿGª   €∑   s ÷∑  ƒ  ÷∑   Ω   æ   s ÷µá   ÿG≠   €ø   o ƒ  ÷∑  ¿   I¡   ÷µá   G¬   ÿGª   €∑  s ÷µá   ÿG≠   €ø   o ƒ  ÷∑  √   I¡   ÷µá   G¬   ÿGª   €∑  s ÷π   Æ   ÷ƒ   Æ   ÷¥   Æ   ÷4   Æ   ÷µá   ÿG≠   €ø   o ƒ  ÷∑  ≈   I´   ÷∑  I∆   ÷c   ∏   d    ∏   d   Æ   ÷2i«   Æ   ÷2i»   Æ 	  ÷2i…   Æ 
+  ÷Æ   ÷∑  h    IÀ   ÷µá   G¬   ÿGª   €∑  s ÷ û»…»ü»ëÛ  …ì2   ëÛ   û¶´¨  ÷¨  ÷∏    Õ   ∑  s ÷ û…»ü…ëÙ  hŒ   ¨  ÷2iœ   Æ   ÷h–   Æ   ÷h—   Æ   ÷2i“   Æ   ÷µô   ÿGö   €o  
+      ‡?¨  ÷2i”   Æ   ÷h‘   Æ &  ÷h’   Æ 1  ÷h÷   Æ   ÷Æ   ÷h◊   Æ "  ÷hÿ   Æ )  ÷hŸ   Æ $  ÷h⁄   Æ   ÷h€   Æ    ÷h‹   Æ   ÷h›   ¨  ÷hﬁ   Æ -  ÷∑   s  ÷»ü À0 `P7 `P6 `P6 `P6 `PG!661 `Pû Pï0 ; `Pô PN `Pê P> `Pê P> `Pê P> `Pê  PI `P±0 `Pî@ ë@ "`P6 `P>!> !`P6 0`P6 )`P:& `P&fPò0 `Pü P= `P6 `PJ ?`Pò@% `Pë î0 `PAÄ ⁄I( `P§0 `PAÄ ⁄ó@+ ë@0 `PK2 `P6 `P6 `P: `PJ9 `P%**ê@; `P%*,**&'&&&&&*#((&&&'*&&**'&&&*'&*|((&*|((*P(('&#'"''((&"*((*!''& '&&&&&&$''< `P%ë0 `P< 
+`P>&`Pù ˇˇˇÓ4 `Pî@? í@C `P%*,**&'&&&&&*#((&&&'*&&**'&&&*'&*|((&*|((*P(('&#'"''((&"*((*!''& '&&&&&&$''< `P%ë0 `P< `P7 `P>&#`Pù ˇˇˇÓ4 `Pî@H í@N `Pµ@P&)`P£ ˇˇˇÓ4 `Pö@P MS&)`P£ ˇˇˇÓ4 `Pö@S í@_ `P: 
+`Pê0 `POc `P: 
+`Pê0 `POg 
+`Pµ0 `P%%*$&
+*7*ê0 `P%%*$&
+*7*ï@k `P: `P; `P: `P; `P: `PKr `P8 `P: `P; `P7 $`P7 `P; `P%5 : 6 %; : ë@ `P%5 	: 	6 	: 	: 	ë00 `P7771 `Pê0 `Pê0 `Pî0 ; `P; `Pë00 `Pµ0 `P; `Pê@Ä  ò `Pï0 `Põ P= `Pò $P>00 `Pï0 `Pï0 `P; `P∫0 `P∫00 `PLÄ  ¨ `PLÄ  æ `PFÄ  ƒ P90 `P¨0 `PÆ0 `Pê0 `Pê00 `P¨0  `P&fPô 6 `P? `P∏0 `P; `P; `PLÄ  Ã ,`Pó@Ä  ‘ `Pí 
+P40 `P;000!6 `P> `P/P90 `P≠0 `P™ Pî ô0 `P*í0 `P*< =00 `Pî0 `Põ P= `Pò $P=00 `Pô0 `P*7 `P*ô0 `P-,,----ò P'ˇˇˇıP+$V; `PAÄ ⁄JÄ  Ú `P-,,----ò P'ˇˇˇıP+$V;00 `Pë 	P8`P?`Pî0`Pî0`Pî000 `Pë 	P8`P?`Pî0`Pî0`Pî0`Pî0`Pî0`Pî000 `Pë 	P8`P?`Pî0`Pî0`Pî0`Pî0`Pî0`Pî000`P/P4`P/P400`Pï PMÄ  `P/P40 `Pë 	P8 `P? `Pï P40 `Pë 	P8 `P?00`Pï P400 `P;  `P; `P;  `P; `Pë 	P8 `P? `P; `P%*ê0 `PLÄ 8 `PLÄ @ `P<00 `P8 `POÄ k `Pï P40 `PAÄ ⁄ô@Ä o ; `Pê P4 `PAÄ ⁄JÄ v `P:000 `P<0 ,`PKÄ ˝ `PKÄ  `PLÄ * `P,Pí0 `PLÄ P #`PKÄ n #`PKÄ { `PKÄ ™ `P7 `PKÄ º (`PKÄ ⁄ (`PKÄ ˝ `PKÄ  `PKÄ  `PKÄ å `PJÄ Ω `PKÄ ÿ `P:0P   8  à        è  ˇˇˇˇ   l            ¨   -         ñ            º            ‡  ~         Ü            á           ¥            µ           …         j   ;  H       m   ú  H       p     T       q   r  T       à     "       í   ã  o          Ô        ñ   3  ?      õ   œ  ù     ñ   v           w            x        ñ   h           i            j        Ã     %          °            ¢                y   +           l   "         Ï  l           º          F  6         ß  6         /  <         É  <           ‚
+  ,          l  †           3  D     @   @                             µ   ÿG   €o  úü0 	`P,P3 Q      D   D                             h    µ   s ÷ü `PFÄ ⁄%P40P    3ıÿ  p‰    p   p	    p  pú   p  p  p  p                     : \   p             \   `  `  `      	  T    `©   
+  Ω          `  `  `ˇ     “     `     @  @  @          @  ç !     #  "  $  %  &  '  (  )  *  ,  +  -  .  /  0  1  2  q   3  4  5  7  6  8  9  :  ;  <  >  =  ?  A  @  B  C  D  F  E  G  H  J  I  K  L  M  N  O  P  Q  R  S  T  U  V  W  Y  X  Z  [  \  ]  ^  _  `  a  b  c  d  e  f  g  	  `  @i  
+  `k  l    `  `  @n  m  o  q  p  1 r  s    @u  X   x  z  |  É    @#  Ö    @á  ã    `å  ç  é  è  í    p  p  p¡    `√    p  p  `  ∆    »    `  p…  	  @   À  Ã  Õ  Œ  œ  –  —  “    ≈  ”  ß  ‘  ¶  ÷  ◊  °  ÿ  Ÿ  ⁄  ‹  ›  0  ﬁ  d  ‡  ·  ‚  ∑  Ó  Ô  }  Ú  Ò  Û  ı  ¯  ¸     	  p
+  p  p  p   `   p  p  p  p  p  p  p  p  p  p   p!  p"  p#  p$  p%  p&  p   `  p    `  `∫  ª  º    Ω     Pß    Pæ    `o    `  ≈    `ã  Â  ‡  °  Á  )  Ê  È  Ë  Í  Î    pˇXÑ˚                    ﬂ           †         ì    `)
+	         ®    `)
+	 ˛      …     † 	             )      ƒ      †
+      „      †          Õ   `†	         ˛    `)
+	           `)
+	                 )             `)
+	           `†	               †                  )             `†
+	          `)
+	                 )  
+         ` 
+	                 )          9   `†
+	         K   `)
+	         M   `)
+	         S   `†
+	         V   `†
+	    
+   [   `†
+	                 †                †                  †        k   `†
+	                 )          v   `†
+	         Ü   `†
+	         à   `†
+	         â   `†
+	         u   ` 
+	         ø   ` 
+	         æ   ` 
+	 ùH©¿      L∑      L∑                 Ä
+   A∑     A∑     
+            ∞!  e$  ∞!  e$  §               Ç$  ë'  Ç$  ë'  ≠               ∞'  0  ß'  0  ø                72  R2  72  R2  ’               v2  õ2  m2  õ2  ◊   !           Äº;  Á<  †;  Á<                ù<  ﬂ<  î<  ﬂ<    /             G  —G  G  —G  3            ÄÍG  ¨H  ÍG  ¨H  9              	H  ôH  	H  ôH  :               ≈H  ˆH  ≈H  ˆH  A              *I  ÏO  !I  ÏO  E               ÜI  ‰O  }I  ‰O  G  $             ÑJ  ÑO  ÑJ  ÑO  J  C            ¥P  Q  ´P  Q  w  %          Ä"Q  KQ  "Q  KQ  {              4Q  JQ  4Q  JQ  {  $          DÇÉQ  ¯g  tQ  ¯g  }  5            åZ  ˙Z  åZ  ˙Z  ∞  ;            h  rl  h  rl  ˛  &            äl  ›m  äl  ›m                (n  hr  (n  hr  ,              ór  Dx  ér  Dx  Q  ,            rx  Ïy  ix  Ïy  o  ,          Äz  Å  	z  Å  |  $            ˝}  1~  Ù}  1~  ñ             R~  ⁄Ä  I~  ⁄Ä  ö               j  ∂  a  ∂  ü  $           ÄZÅ  É  QÅ  É  ¨  !            µÅ  ÛÅ  µÅ  ÛÅ  Æ               QÉ  bá  HÉ  bá  Ω  1            îá  Cç  ãá  Cç  €  1            fç  ê  ]ç  ê  ˛  "            ;ê  ˜•  2ê  ˜•    %          @Ä¶  √ß  ¶  √ß  Ä  %          @ÄÁß  Ã±  ÿß  Ã±  ç  #           @ÄÔ±  /∑  ‡±  /∑  æ  "           5°›å$–      e,ﬁe,ﬁFH§e2V   Ç    O^partitionKey=%28https%2Ctutorialspoint.com%29,:https://sm1.selectmedia.asia/cdn/tags/tag_ffa9b4f0-600c-4dd3-b44e-4844444483a9.js necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/3 200 OK
+x-guploader-uploadid: ADPycdsQ4yAGEGGsSiCp8dY9F1JDaFncsLKTxYS39djjyKzD5pgPUMOOBvNHETzmhUHn3iQnAOBOUb9DOp44E_e4OHR0AA
+x-goog-generation: 1694612961288794
+x-goog-metageneration: 2
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 46924
+x-goog-hash: crc32c=PK5cGQ==, md5=1JpgmrzTnQDzJCEYeX0Spw==
+x-goog-storage-class: STANDARD
+accept-ranges: bytes
+content-length: 46924
+access-control-allow-origin: *
+access-control-expose-headers: Authorization, Content-Range, Accept, Content-Type, Origin, Range
+server: UploadServer
+date: Tue, 03 Oct 2023 14:25:10 GMT
+age: 1901
+last-modified: Wed, 13 Sep 2023 13:49:21 GMT
+etag: "d49a609abcd39d00f3242118797d12a7"
+content-type: text/javascript;charset=UTF-8
+cache-control: public,max-age=3600
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+X-Firefox-Http3: h3
+ original-response-headers x-guploader-uploadid: ADPycdsQ4yAGEGGsSiCp8dY9F1JDaFncsLKTxYS39djjyKzD5pgPUMOOBvNHETzmhUHn3iQnAOBOUb9DOp44E_e4OHR0AA
+x-goog-generation: 1694612961288794
+x-goog-metageneration: 2
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 46924
+x-goog-hash: crc32c=PK5cGQ==
+x-goog-hash: md5=1JpgmrzTnQDzJCEYeX0Spw==
+x-goog-storage-class: STANDARD
+accept-ranges: bytes
+content-length: 46924
+access-control-allow-origin: *
+access-control-expose-headers: Authorization
+access-control-expose-headers: Content-Range
+access-control-expose-headers: Accept
+access-control-expose-headers: Content-Type
+access-control-expose-headers: Origin
+access-control-expose-headers: Range
+server: UploadServer
+date: Tue, 03 Oct 2023 14:25:10 GMT
+age: 1901
+last-modified: Wed, 13 Sep 2023 13:49:21 GMT
+etag: "d49a609abcd39d00f3242118797d12a7"
+content-type: text/javascript;charset=UTF-8
+cache-control: public,max-age=3600
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+ ctid 2 uncompressed-len 0 net-response-time-onstart 160 net-response-time-onstop 204 alt-data 1;46924,javascript/moz-bytecode-20220412075543-8l alt-data-from-child 1  ”¥
